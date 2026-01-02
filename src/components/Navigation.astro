@@ -1,0 +1,42 @@
+---
+import { site } from '../../config/site';
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-gray-100">
+  <nav class="container mx-auto px-4 h-16 flex items-center justify-between" aria-label="Main navigation">
+    <!-- Site Logo / Title -->
+    <a
+      href="/"
+      class="text-xl font-bold text-gray-900 hover:text-primary-600 transition-colors"
+    >
+      Home
+    </a>
+
+    <!-- Navigation Links -->
+    <ul class="flex items-center gap-6">
+      {
+        site.navigation.map((item) => {
+          const isActive = currentPath === item.href || currentPath.startsWith(item.href + '/');
+          return (
+            <li>
+              <a
+                href={item.href}
+                class:list={[
+                  'text-sm font-medium transition-colors',
+                  isActive
+                    ? 'text-primary-600'
+                    : 'text-gray-600 hover:text-gray-900',
+                ]}
+                aria-current={isActive ? 'page' : undefined}
+              >
+                {item.label}
+              </a>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </nav>
+</header>

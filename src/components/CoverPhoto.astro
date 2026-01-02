@@ -1,0 +1,24 @@
+---
+import { site } from '../../config/site';
+
+interface Props {
+  class?: string;
+}
+
+const { class: className = '' } = Astro.props;
+---
+
+<div class:list={['relative w-full overflow-hidden bg-gray-100', className]}>
+  <div class="aspect-[21/9] md:aspect-[3/1] lg:aspect-[4/1]">
+    <img
+      src={site.coverImage}
+      alt=""
+      class="w-full h-full object-cover"
+      loading="eager"
+      decoding="async"
+      fetchpriority="high"
+    />
+    <!-- Gradient overlay for better text readability if needed -->
+    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+  </div>
+</div>

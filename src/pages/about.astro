@@ -1,0 +1,146 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SocialLinks from '../components/SocialLinks.astro';
+import { site } from '../../config/site';
+---
+
+<BaseLayout title="About" description={`Learn more about ${site.author.name}`}>
+  <section class="py-12 md:py-16">
+    <div class="container mx-auto px-4 max-w-3xl lg:max-w-6xl">
+      <!-- Header Section -->
+      <header class="text-center mb-12">
+        <div class="mb-6">
+          <img
+            src={site.author.avatar}
+            alt={site.author.name}
+            class="w-32 h-32 rounded-full mx-auto object-cover shadow-lg"
+            width="128"
+            height="128"
+            loading="eager"
+            onerror="this.style.display='none'"
+          />
+        </div>
+        <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
+          {site.author.name}
+        </h1>
+        <p class="text-gray-600 text-lg">Software Engineer & Technical Writer</p>
+        <div class="mt-4">
+          <SocialLinks iconSize="h-6 w-6" class="justify-center" />
+        </div>
+      </header>
+
+      <!-- Content Container - Centered -->
+      <div class="max-w-3xl mx-auto">
+        <!-- Bio Section -->
+        <section class="prose prose-lg mx-auto mb-12">
+        <h2>About Me</h2>
+        <p>{site.author.bio}</p>
+        <p>
+          I believe in writing clear, practical content that helps developers solve real
+          problems. Whether it is explaining complex architectural patterns or sharing
+          lessons learned from production systems, my goal is to provide value to the
+          engineering community.
+        </p>
+      </section>
+
+      <!-- Experience Section (Mini Resume) -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Experience Highlights</h2>
+
+        <div class="space-y-6">
+          <div class="border-l-4 border-primary-500 pl-4">
+            <h3 class="font-semibold text-gray-900">Senior Software Engineer</h3>
+            <p class="text-gray-600 text-sm">Company Name | 2022 - Present</p>
+            <p class="text-gray-700 mt-2">
+              Leading technical initiatives and mentoring junior developers. Focus on
+              scalable architecture and best practices.
+            </p>
+          </div>
+
+          <div class="border-l-4 border-gray-300 pl-4">
+            <h3 class="font-semibold text-gray-900">Software Engineer</h3>
+            <p class="text-gray-600 text-sm">Previous Company | 2019 - 2022</p>
+            <p class="text-gray-700 mt-2">
+              Built and maintained production systems serving millions of users.
+              Contributed to open source projects.
+            </p>
+          </div>
+
+          <div class="border-l-4 border-gray-300 pl-4">
+            <h3 class="font-semibold text-gray-900">Junior Developer</h3>
+            <p class="text-gray-600 text-sm">First Company | 2017 - 2019</p>
+            <p class="text-gray-700 mt-2">
+              Started my journey in software development. Learned fundamentals of web
+              development and backend systems.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Technical Skills</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <h3 class="font-semibold text-gray-900 mb-3">Languages & Frameworks</h3>
+            <div class="flex flex-wrap gap-2">
+              {
+                ['TypeScript', 'JavaScript', 'Python', 'Go', 'React', 'Node.js'].map(
+                  (skill) => (
+                    <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
+                      {skill}
+                    </span>
+                  )
+                )
+              }
+            </div>
+          </div>
+
+          <div>
+            <h3 class="font-semibold text-gray-900 mb-3">Tools & Platforms</h3>
+            <div class="flex flex-wrap gap-2">
+              {
+                ['AWS', 'Docker', 'Kubernetes', 'PostgreSQL', 'Redis', 'Git'].map(
+                  (skill) => (
+                    <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
+                      {skill}
+                    </span>
+                  )
+                )
+              }
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact CTA -->
+      <section class="bg-gray-50 rounded-lg p-8 text-center">
+        <h2 class="text-xl font-bold text-gray-900 mb-2">Get in Touch</h2>
+        <p class="text-gray-600 mb-4">
+          Interested in collaborating or have questions? Feel free to reach out!
+        </p>
+        <div class="flex justify-center gap-4">
+          <a
+            href={site.social.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
+          >
+            Connect on LinkedIn
+          </a>
+          <a
+            href={site.social.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-900 transition-colors"
+          >
+            Follow on GitHub
+          </a>
+        </div>
+      </section>
+      </div>
+      <!-- End Content Container -->
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,50 @@
+version: '3'
+
+tasks:
+  dev:
+    desc: Start local development server with hot reload
+    cmds:
+      - npm run dev
+
+  create:
+    desc: Create a new article folder in src/content/articles
+    cmds:
+      - mkdir -p src/content/articles/{{.CLI_ARGS}}
+      - |
+        cat > src/content/articles/{{.CLI_ARGS}}/index.md << 'EOF'
+        ---
+        title: "{{.CLI_ARGS | title}}"
+        date: $(date +%Y-%m-%d)
+        description: "A brief description of the article"
+        tags:
+          - tag1
+          - tag2
+        ---
+
+        # Introduction
+
+        Write your article content here...
+
+        ## Code Example
+
+        ```typescript
+        // Your code here
+        ```
+
+        ## Conclusion
+
+        Wrap up your thoughts...
+        EOF
+      - echo "Created article at src/content/articles/{{.CLI_ARGS}}/index.md"
+    requires:
+      vars: [CLI_ARGS]
+
+  build:
+    desc: Build the site for production
+    cmds:
+      - npm run build
+
+  preview:
+    desc: Preview the production build locally
+    cmds:
+      - npm run preview

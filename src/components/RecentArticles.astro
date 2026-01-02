@@ -1,0 +1,54 @@
+---
+import { getCollection } from 'astro:content';
+import ArticleCard from './ArticleCard.astro';
+import { site } from '../../config/site';
+
+// Reading time calculation co-located in this component
+function calculateReadingTime(content: string): number {
+  const WORDS_PER_MINUTE = 200;
+  const text = content.replace(/<[^>]*>/g, '');
+  const words = text.trim().split(/\s+/).length;
+  return Math.max(1, Math.ceil(words / WORDS_PER_MINUTE));
+}
+
+// Fetch and sort articles
+const allArticles = await getCollection('articles');
+const recentArticles = allArticles
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+  .slice(0, site.recentArticlesCount);
+---
+
+<section class="py-12">
+  <div class="container mx-auto px-4 max-w-3xl lg:max-w-6xl">
+    <div class="flex items-center justify-between mb-8">
+      <h2 class="text-2xl font-bold text-gray-900">Recent Articles</h2>
+      <a
+        href="/articles"
+        class="text-sm font-medium text-primary-600 hover:text-primary-700 transition-colors"
+      >
+        View all articles &rarr;
+      </a>
+    </div>
+
+    {
+      recentArticles.length > 0 ? (
+        <div class="divide-y divide-gray-200">
+          {recentArticles.map((article) => (
+            <ArticleCard
+              slug={article.id}
+              title={article.data.title}
+              description={article.data.description}
+              date={article.data.date}
+              tags={article.data.tags}
+              readingTime={calculateReadingTime(article.body || '')}
+            />
+          ))}
+        </div>
+      ) : (
+        <p class="text-gray-600 text-center py-8">
+          No articles yet. Check back soon!
+        </p>
+      )
+    }
+  </div>
+</section>

@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CoverPhoto from '../components/CoverPhoto.astro';
+import RecentArticles from '../components/RecentArticles.astro';
+import { site } from '../../config/site';
+---
+
+<BaseLayout>
+  <!-- Cover Photo Section -->
+  <CoverPhoto />
+
+  <!-- Hero Section -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="container mx-auto px-4 max-w-3xl lg:max-w-6xl text-center">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        {site.title}
+      </h1>
+      <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+        {site.description}
+      </p>
+    </div>
+  </section>
+
+  <!-- Recent Articles Section -->
+  <section class="bg-gray-50">
+    <RecentArticles />
+  </section>
+</BaseLayout>

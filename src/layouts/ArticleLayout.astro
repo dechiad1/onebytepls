@@ -1,0 +1,162 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import TagList from '../components/TagList.astro';
+import { site } from '../../config/site';
+
+interface Props {
+  title: string;
+  description: string;
+  date: Date;
+  tags?: string[];
+  readingTime: number;
+  coverImage?: ImageMetadata;
+}
+
+const { title, description, date, tags = [], readingTime, coverImage } = Astro.props;
+
+const formattedDate = date.toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+
+<BaseLayout title={title} description={description}>
+  <article class="py-8 md:py-12">
+    <div class="container mx-auto px-4 max-w-3xl lg:max-w-6xl">
+      <!-- Article Header -->
+      <header class="mb-8 md:mb-12">
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          {title}
+        </h1>
+
+        <div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-gray-600 mb-4">
+          <time datetime={date.toISOString()} class="flex items-center gap-1">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-4 w-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+              />
+            </svg>
+            {formattedDate}
+          </time>
+
+          <span class="text-gray-400">|</span>
+
+          <span class="flex items-center gap-1">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-4 w-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+            {readingTime} min read
+          </span>
+        </div>
+
+        {tags.length > 0 && <TagList tags={tags} />}
+
+        <!-- Back Navigation -->
+        <button
+          id="back-nav"
+          class="inline-flex items-center gap-2 text-sm text-gray-600 hover:text-primary-600 transition-colors cursor-pointer mt-4"
+          aria-label="Go back"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M10 19l-7-7m0 0l7-7m-7 7h18"
+            />
+          </svg>
+        </button>
+      </header>
+
+      <!-- Cover Image -->
+      {
+        coverImage && (
+          <div class="mb-8 md:mb-12 -mx-4 md:mx-0">
+            <img
+              src={coverImage.src}
+              alt=""
+              class="w-full h-auto rounded-none md:rounded-lg"
+              width={coverImage.width}
+              height={coverImage.height}
+              loading="eager"
+            />
+          </div>
+        )
+      }
+
+      <!-- Article Content -->
+      <div class="prose prose-lg prose-gray mx-auto">
+        <slot />
+      </div>
+
+      <!-- Article Footer -->
+      <footer class="mt-12 pt-8 border-t border-gray-200">
+
+      <!-- no author naming for now
+        <div class="flex items-center gap-4">
+          <img
+            src={site.author.avatar}
+            alt={site.author.name}
+            class="w-12 h-12 rounded-full object-cover"
+            width="48"
+            height="48"
+            loading="lazy"
+            onerror="this.style.display='none'"
+          />
+          <div>
+            <p class="font-medium text-gray-900">{site.author.name}</p>
+            <p class="text-sm text-gray-600">Author</p>
+          </div>
+        </div>
+      -->
+      </footer>
+    </div>
+  </article>
+</BaseLayout>
+
+<script>
+  // Back navigation functionality
+  const backButton = document.getElementById('back-nav');
+
+  if (backButton) {
+    backButton.addEventListener('click', () => {
+      const hasHistory = window.history.length > 1;
+      const sameOrigin = document.referrer && document.referrer.startsWith(window.location.origin);
+
+      if (hasHistory && sameOrigin) {
+        // User navigated from within the site - go back
+        window.history.back();
+      } else {
+        // Direct link or external - go to articles page
+        window.location.href = '/articles';
+      }
+    });
+  }
+</script>

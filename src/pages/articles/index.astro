@@ -1,0 +1,100 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import InfiniteScroll from '../../components/InfiniteScroll';
+import { site } from '../../../config/site';
+
+// Reading time calculation co-located in this page
+function calculateReadingTime(content: string): number {
+  const WORDS_PER_MINUTE = 200;
+  const text = content.replace(/<[^>]*>/g, '');
+  const words = text.trim().split(/\s+/).length;
+  return Math.max(1, Math.ceil(words / WORDS_PER_MINUTE));
+}
+
+// Fetch and sort all articles
+const allArticles = await getCollection('articles');
+const sortedArticles = allArticles
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+  .map((article) => ({
+    slug: article.id,
+    title: article.data.title,
+    description: article.data.description,
+    date: article.data.date.toISOString(),
+    tags: article.data.tags || [],
+    readingTime: calculateReadingTime(article.body || ''),
+  }));
+
+const initialBatch = sortedArticles.slice(0, site.articlesPerBatch);
+---
+
+<BaseLayout title="Articles" description="Browse all technical articles and insights">
+  <section class="py-12">
+    <div class="container mx-auto px-4 max-w-3xl lg:max-w-6xl">
+      <header class="mb-8">
+        <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-2">Articles</h1>
+        <p class="text-gray-600">
+          {sortedArticles.length} article{sortedArticles.length !== 1 ? 's' : ''} published
+        </p>
+      </header>
+
+      {
+        sortedArticles.length > 0 ? (
+          <>
+            {/* Static fallback for users without JavaScript */}
+            <noscript>
+              <div class="divide-y divide-gray-200">
+                {sortedArticles.map((article) => (
+                  <ArticleCard
+                    slug={article.slug}
+                    title={article.title}
+                    description={article.description}
+                    date={new Date(article.date)}
+                    tags={article.tags}
+                    readingTime={article.readingTime}
+                  />
+                ))}
+              </div>
+            </noscript>
+
+            {/* Interactive infinite scroll for JS-enabled browsers */}
+            <div class="js-only">
+              <InfiniteScroll
+                client:load
+                initialArticles={initialBatch}
+                allArticles={sortedArticles}
+                batchSize={site.articlesPerBatch}
+              />
+            </div>
+          </>
+        ) : (
+          <div class="text-center py-16">
+            <p class="text-gray-600 text-lg">No articles yet. Check back soon!</p>
+          </div>
+        )
+      }
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* Hide JS-only content when JavaScript is disabled */
+  .js-only {
+    display: block;
+  }
+
+  noscript + .js-only {
+    display: block;
+  }
+</style>
+
+<script>
+  // Show JS-only content and hide noscript content
+  document.addEventListener('DOMContentLoaded', () => {
+    const noscriptElements = document.querySelectorAll('noscript');
+    noscriptElements.forEach((el) => {
+      el.remove();
+    });
+  });
+</script>
