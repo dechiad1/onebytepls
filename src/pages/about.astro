@@ -36,10 +36,10 @@ import { site } from '../../config/site';
         <h2>About Me</h2>
         <p>{site.author.bio}</p>
         <p>
-          I believe in writing clear, practical content that helps developers solve real
-          problems. Whether it is explaining complex architectural patterns or sharing
-          lessons learned from production systems, my goal is to provide value to the
-          engineering community.
+          I believe writing clear, practical content helps the writer refine their thoughts, 
+          opinions, & their ability to reach the intented audience. Whether it is explaining 
+          complex architectural patterns or messaging a teammate asking for help, my goal is 
+          to improve the general quality of communication for teams & projects I work on.
         </p>
       </section>
 
@@ -49,30 +49,85 @@ import { site } from '../../config/site';
 
         <div class="space-y-6">
           <div class="border-l-4 border-primary-500 pl-4">
-            <h3 class="font-semibold text-gray-900">Senior Software Engineer</h3>
-            <p class="text-gray-600 text-sm">Company Name | 2022 - Present</p>
+            <h3 class="font-semibold text-gray-900">Director of Software Engineering</h3>
+            <p class="text-gray-600 text-sm">JPMC | Present</p>
             <p class="text-gray-700 mt-2">
-              Leading technical initiatives and mentoring junior developers. Focus on
-              scalable architecture and best practices.
+              Leading technical initiatives and growing teams. Focus on
+              using GenAI for real value as a partner to business expertise.
             </p>
           </div>
 
           <div class="border-l-4 border-gray-300 pl-4">
-            <h3 class="font-semibold text-gray-900">Software Engineer</h3>
-            <p class="text-gray-600 text-sm">Previous Company | 2019 - 2022</p>
+            <h3 class="font-semibold text-gray-900">VP of Software Engineering</h3>
+            <p class="text-gray-600 text-sm">JPMC | Previous </p>
             <p class="text-gray-700 mt-2">
-              Built and maintained production systems serving millions of users.
-              Contributed to open source projects.
+              Built and maintained production systems serving both internal & external clients. 
             </p>
           </div>
+        </div>
 
-          <div class="border-l-4 border-gray-300 pl-4">
-            <h3 class="font-semibold text-gray-900">Junior Developer</h3>
-            <p class="text-gray-600 text-sm">First Company | 2017 - 2019</p>
-            <p class="text-gray-700 mt-2">
-              Started my journey in software development. Learned fundamentals of web
-              development and backend systems.
-            </p>
+      </section>
+
+      <!-- Technical Areas of Interest -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Projects & Purpose</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Document Data Extraction -->
+          <div class="bg-gray-50 rounded-lg p-6 border border-gray-200">
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-8 w-8 text-primary-600"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                  />
+                </svg>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-semibold text-gray-900 mb-2">Document Data Extraction with LLMs</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                  Exploring intelligent document processing and structured data extraction using large
+                  language models. Focused on transforming unstructured documents into actionable data.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Financial Education -->
+          <div class="bg-gray-50 rounded-lg p-6 border border-gray-200">
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-8 w-8 text-primary-600"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                  />
+                </svg>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-semibold text-gray-900 mb-2">Financial Education</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                  Building tools and resources to make financial literacy accessible for the teen to young 20s population. The earlier we start, the more empowered we are.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -86,7 +141,7 @@ import { site } from '../../config/site';
             <h3 class="font-semibold text-gray-900 mb-3">Languages & Frameworks</h3>
             <div class="flex flex-wrap gap-2">
               {
-                ['TypeScript', 'JavaScript', 'Python', 'Go', 'React', 'Node.js'].map(
+                ['TypeScript', 'Python', 'Java', 'React', 'Node.js'].map(
                   (skill) => (
                     <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
                       {skill}
@@ -101,7 +156,7 @@ import { site } from '../../config/site';
             <h3 class="font-semibold text-gray-900 mb-3">Tools & Platforms</h3>
             <div class="flex flex-wrap gap-2">
               {
-                ['AWS', 'Docker', 'Kubernetes', 'PostgreSQL', 'Redis', 'Git'].map(
+                ['AWS', 'Docker', 'Kubernetes', 'Terraform','Claude Code'].map(
                   (skill) => (
                     <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
                       {skill}

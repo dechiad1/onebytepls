@@ -4,16 +4,17 @@
  */
 
 export const site = {
-  title: 'Communication is the most important bit of software.',
-  description: 'Essays on software in the workplace, and various other interests. Written as a practice in clarity and communication.',
+  name: 'OneBytePls',
+  title: 'Communication is the most important bit.',
+  description: 'Essays on software in the workplace, & various other interests. Written as a practice in clarity & communication.',
   copywrite: '© 2025 onebytepls. Opinions are my own.',
   url: 'https://onebytepls.com',
   language: 'en',
 
   author: {
     name: 'Daniel DeChiara',
-    bio: `Software engineer passionate about building scalable systems and sharing knowledge.
-    I write about software architecture, development best practices, and lessons learned from real-world projects.`,
+    bio: `Software engineer passionate about creative problem solving, learning, teaching, & reading.
+    I write about software development in organizations, development experience, & lessons learned from real-world projects.`,
     avatar: '/images/avatar.jpg',
   },
 
