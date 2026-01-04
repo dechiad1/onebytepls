@@ -1,7 +1,7 @@
 ---
 title: "REST API Design Best Practices"
-date: 2025-12-10
-description: "Design APIs that developers love to use. Learn conventions, patterns, and common pitfalls to avoid."
+date: 2022-08-10
+description: "Design APIs that developers love to use. The conventions, patterns, and common pitfalls to avoid."
 tags:
   - api
   - rest
@@ -9,7 +9,7 @@ tags:
   - best-practices
 ---
 
-A well-designed API is a joy to work with. It is intuitive, consistent, and handles edge cases gracefully. This guide covers the principles that make APIs developer-friendly.
+A well-designed API is a joy to work with. It is intuitive, consistent, & handles edge cases gracefully. This guide covers the principles that make APIs developer-friendly.
 
 ## Resource-Oriented Design
 
@@ -45,12 +45,12 @@ But avoid deep nesting. More than 2-3 levels becomes unwieldy:
 # Too deep
 GET /users/123/orders/456/items/789/reviews
 
-# Better - use query parameters or separate endpoints
+# Prefer to use query parameters or separate endpoints
 GET /order-items/789/reviews
 GET /reviews?orderItemId=789
 ```
 
-## HTTP Methods and Status Codes
+## HTTP Methods & Status Codes
 
 Use HTTP methods according to their semantics:
 
@@ -79,7 +79,7 @@ Return appropriate status codes:
 500 Internal Server Error # Server-side error
 ```
 
-## Request and Response Design
+## Request & Response Design
 
 ### Consistent Response Format
 
@@ -153,7 +153,7 @@ Include pagination metadata in responses:
 }
 ```
 
-## Filtering, Sorting, and Searching
+## Filtering, Sorting, & Searching
 
 ### Filtering
 
@@ -202,14 +202,11 @@ Accept: application/vnd.myapi.v1+json
 
 ### Authentication
 
-Use industry standards:
+Use an industry standard. JWT, for example, allows for authentication & authorization. If the user has a valid token from a trusted identity provider you can trust they are who they say they are. The token itself can carry claims, detailing what the user is allowed to do. 
 
 ```
 # Bearer token (JWT)
 Authorization: Bearer eyJhbGciOiJIUzI1NiIs...
-
-# API Key (for server-to-server)
-X-API-Key: your-api-key
 ```
 
 ### Rate Limiting
@@ -236,4 +233,4 @@ Document your API thoroughly:
 
 ## Conclusion
 
-Good API design requires thinking from the consumer's perspective. Be consistent, follow conventions, and handle errors gracefully. Your API is a product - treat it with the care it deserves.
+Good API design requires thinking from the consumer's perspective. Be consistent, follow conventions, & handle errors gracefully. Your API is a product - treat it with the care it deserves.

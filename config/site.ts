@@ -6,7 +6,7 @@
 export const site = {
   name: 'OneBytePls',
   title: 'Communication is the most important bit.',
-  description: 'Essays on software in the workplace, & various other interests. Written as a practice in clarity & communication.',
+  description: 'Essays on software in the workplace, and various other interests. Written as a practice in clarity and communication.',
   copywrite: '© 2025 onebytepls. Opinions are my own.',
   url: 'https://onebytepls.com',
   language: 'en',
