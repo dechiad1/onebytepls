@@ -48,3 +48,9 @@ tasks:
     desc: Preview the production build locally
     cmds:
       - npm run preview
+
+  deploy:local:
+    desc: manually push dist to cloudflare r2
+    cmds:
+      - npm run build
+      - npx wrangler deploy --assets=./dist

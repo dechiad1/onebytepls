@@ -1,0 +1,19 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "onebytepls",
+  "compatibility_date": "2026-01-04",
+  "assets": {
+    "directory": "dist"
+  },
+	"routes": [
+		{
+			"pattern": "onebytepls.com",
+			"zone_name": "onebytepls.com",
+			"custom_domain": true
+		},
+		{
+			"pattern": "www.onebytepls.com",
+			"zone_name": "onebytepls.com",
+		}
+	]
+}
