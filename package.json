@@ -5,6 +5,8 @@
   "description": "Personal website for technical writing - One Byte Please",
   "scripts": {
     "dev": "astro dev",
+    "dev:full": "wrangler pages dev --proxy 4321",
+    "dev:functions": "wrangler pages dev dist --port 8788",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",

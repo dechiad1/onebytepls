@@ -110,8 +110,8 @@ export async function onRequestGet(context: {
 }): Promise<Response> {
   try {
     // Parse query parameter
-    const url = new URL(context.request.url);
-    const query = url.searchParams.get("q") || url.searchParams.get("query");
+    const requestUrl = new URL(context.request.url);
+    const query = requestUrl.searchParams.get("q") || requestUrl.searchParams.get("query");
 
     if (!query) {
       return new Response(
@@ -130,9 +130,10 @@ export async function onRequestGet(context: {
     }
 
     // Fetch the search index
-    // In Cloudflare Pages, we can fetch from the same origin
-    const indexUrl = new URL("/search-index.json", url.origin);
-    const indexResponse = await fetch(indexUrl.toString());
+    // Use request's origin to build URL (works in both local and production)
+    const origin = requestUrl.origin; // e.g., http://localhost:8788 or https://onebytepls.com
+    const indexUrl = `${origin}/search-index.json`;
+    const indexResponse = await fetch(indexUrl);
 
     if (!indexResponse.ok) {
       throw new Error(`Failed to load search index: ${indexResponse.status}`);

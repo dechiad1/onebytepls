@@ -6,6 +6,17 @@ tasks:
     cmds:
       - npm run dev
 
+  dev:full:
+    desc: Start dev server with Cloudflare Functions (hot reload + /api/search endpoint)
+    cmds:
+      - npm run dev:full
+
+  dev:functions:
+    desc: Run production build locally with Cloudflare Functions
+    cmds:
+      - task: build
+      - npm run dev:functions
+
   create:
     desc: Create a new article folder in src/content/articles
     cmds:
