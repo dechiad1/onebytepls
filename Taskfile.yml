@@ -39,9 +39,15 @@ tasks:
     requires:
       vars: [CLI_ARGS]
 
+  build-index:
+    desc: Generate search index from articles
+    cmds:
+      - python3 scripts/build_search_index.py
+
   build:
     desc: Build the site for production
     cmds:
+      - task: build-index
       - npm run build
 
   preview:

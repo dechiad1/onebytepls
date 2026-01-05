@@ -2,7 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ArticleCard from '../../components/ArticleCard.astro';
-import InfiniteScroll from '../../components/InfiniteScroll';
+import ArticleSearch from '../../components/ArticleSearch';
 import { site } from '../../../config/site';
 
 // Reading time calculation co-located in this page
@@ -25,8 +25,6 @@ const sortedArticles = allArticles
     tags: article.data.tags || [],
     readingTime: calculateReadingTime(article.body || ''),
   }));
-
-const initialBatch = sortedArticles.slice(0, site.articlesPerBatch);
 ---
 
 <BaseLayout title="Articles" description="Browse all technical articles and insights">
@@ -58,13 +56,11 @@ const initialBatch = sortedArticles.slice(0, site.articlesPerBatch);
               </div>
             </noscript>
 
-            {/* Interactive infinite scroll for JS-enabled browsers */}
+            {/* Interactive search with article listing for JS-enabled browsers */}
             <div class="js-only">
-              <InfiniteScroll
+              <ArticleSearch
                 client:load
-                initialArticles={initialBatch}
                 allArticles={sortedArticles}
-                batchSize={site.articlesPerBatch}
               />
             </div>
           </>

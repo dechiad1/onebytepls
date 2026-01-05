@@ -1,0 +1,734 @@
+{
+  "index": {
+    "api": [
+      {
+        "slug": "api-design-best-practices",
+        "title": "REST API Design Best Practices",
+        "description": "Design APIs that developers love to use. The conventions, patterns, and common pitfalls to avoid.",
+        "tags": [
+          "api",
+          "rest",
+          "backend",
+          "best-practices"
+        ],
+        "date": "2022-08-10"
+      }
+    ],
+    "rest": [
+      {
+        "slug": "api-design-best-practices",
+        "title": "REST API Design Best Practices",
+        "description": "Design APIs that developers love to use. The conventions, patterns, and common pitfalls to avoid.",
+        "tags": [
+          "api",
+          "rest",
+          "backend",
+          "best-practices"
+        ],
+        "date": "2022-08-10"
+      }
+    ],
+    "backend": [
+      {
+        "slug": "api-design-best-practices",
+        "title": "REST API Design Best Practices",
+        "description": "Design APIs that developers love to use. The conventions, patterns, and common pitfalls to avoid.",
+        "tags": [
+          "api",
+          "rest",
+          "backend",
+          "best-practices"
+        ],
+        "date": "2022-08-10"
+      }
+    ],
+    "best-practices": [
+      {
+        "slug": "api-design-best-practices",
+        "title": "REST API Design Best Practices",
+        "description": "Design APIs that developers love to use. The conventions, patterns, and common pitfalls to avoid.",
+        "tags": [
+          "api",
+          "rest",
+          "backend",
+          "best-practices"
+        ],
+        "date": "2022-08-10"
+      }
+    ],
+    "resources": [
+      {
+        "slug": "api-design-best-practices",
+        "title": "REST API Design Best Practices",
+        "description": "Design APIs that developers love to use. The conventions, patterns, and common pitfalls to avoid.",
+        "tags": [
+          "api",
+          "rest",
+          "backend",
+          "best-practices"
+        ],
+        "date": "2022-08-10"
+      }
+    ],
+    "consistent": [
+      {
+        "slug": "api-design-best-practices",
+        "title": "REST API Design Best Practices",
+        "description": "Design APIs that developers love to use. The conventions, patterns, and common pitfalls to avoid.",
+        "tags": [
+          "api",
+          "rest",
+          "backend",
+          "best-practices"
+        ],
+        "date": "2022-08-10"
+      }
+    ],
+    "design": [
+      {
+        "slug": "api-design-best-practices",
+        "title": "REST API Design Best Practices",
+        "description": "Design APIs that developers love to use. The conventions, patterns, and common pitfalls to avoid.",
+        "tags": [
+          "api",
+          "rest",
+          "backend",
+          "best-practices"
+        ],
+        "date": "2022-08-10"
+      }
+    ],
+    "status": [
+      {
+        "slug": "api-design-best-practices",
+        "title": "REST API Design Best Practices",
+        "description": "Design APIs that developers love to use. The conventions, patterns, and common pitfalls to avoid.",
+        "tags": [
+          "api",
+          "rest",
+          "backend",
+          "best-practices"
+        ],
+        "date": "2022-08-10"
+      }
+    ],
+    "codes": [
+      {
+        "slug": "api-design-best-practices",
+        "title": "REST API Design Best Practices",
+        "description": "Design APIs that developers love to use. The conventions, patterns, and common pitfalls to avoid.",
+        "tags": [
+          "api",
+          "rest",
+          "backend",
+          "best-practices"
+        ],
+        "date": "2022-08-10"
+      }
+    ],
+    "response": [
+      {
+        "slug": "api-design-best-practices",
+        "title": "REST API Design Best Practices",
+        "description": "Design APIs that developers love to use. The conventions, patterns, and common pitfalls to avoid.",
+        "tags": [
+          "api",
+          "rest",
+          "backend",
+          "best-practices"
+        ],
+        "date": "2022-08-10"
+      }
+    ],
+    "error": [
+      {
+        "slug": "api-design-best-practices",
+        "title": "REST API Design Best Practices",
+        "description": "Design APIs that developers love to use. The conventions, patterns, and common pitfalls to avoid.",
+        "tags": [
+          "api",
+          "rest",
+          "backend",
+          "best-practices"
+        ],
+        "date": "2022-08-10"
+      }
+    ],
+    "provide": [
+      {
+        "slug": "api-design-best-practices",
+        "title": "REST API Design Best Practices",
+        "description": "Design APIs that developers love to use. The conventions, patterns, and common pitfalls to avoid.",
+        "tags": [
+          "api",
+          "rest",
+          "backend",
+          "best-practices"
+        ],
+        "date": "2022-08-10"
+      }
+    ],
+    "pagination": [
+      {
+        "slug": "api-design-best-practices",
+        "title": "REST API Design Best Practices",
+        "description": "Design APIs that developers love to use. The conventions, patterns, and common pitfalls to avoid.",
+        "tags": [
+          "api",
+          "rest",
+          "backend",
+          "best-practices"
+        ],
+        "date": "2022-08-10"
+      }
+    ],
+    "filtering": [
+      {
+        "slug": "api-design-best-practices",
+        "title": "REST API Design Best Practices",
+        "description": "Design APIs that developers love to use. The conventions, patterns, and common pitfalls to avoid.",
+        "tags": [
+          "api",
+          "rest",
+          "backend",
+          "best-practices"
+        ],
+        "date": "2022-08-10"
+      }
+    ],
+    "sorting": [
+      {
+        "slug": "api-design-best-practices",
+        "title": "REST API Design Best Practices",
+        "description": "Design APIs that developers love to use. The conventions, patterns, and common pitfalls to avoid.",
+        "tags": [
+          "api",
+          "rest",
+          "backend",
+          "best-practices"
+        ],
+        "date": "2022-08-10"
+      }
+    ],
+    "authentication": [
+      {
+        "slug": "api-design-best-practices",
+        "title": "REST API Design Best Practices",
+        "description": "Design APIs that developers love to use. The conventions, patterns, and common pitfalls to avoid.",
+        "tags": [
+          "api",
+          "rest",
+          "backend",
+          "best-practices"
+        ],
+        "date": "2022-08-10"
+      }
+    ],
+    "gracefully": [
+      {
+        "slug": "api-design-best-practices",
+        "title": "REST API Design Best Practices",
+        "description": "Design APIs that developers love to use. The conventions, patterns, and common pitfalls to avoid.",
+        "tags": [
+          "api",
+          "rest",
+          "backend",
+          "best-practices"
+        ],
+        "date": "2022-08-10"
+      }
+    ],
+    "apis": [
+      {
+        "slug": "api-design-best-practices",
+        "title": "REST API Design Best Practices",
+        "description": "Design APIs that developers love to use. The conventions, patterns, and common pitfalls to avoid.",
+        "tags": [
+          "api",
+          "rest",
+          "backend",
+          "best-practices"
+        ],
+        "date": "2022-08-10"
+      }
+    ],
+    "nesting": [
+      {
+        "slug": "api-design-best-practices",
+        "title": "REST API Design Best Practices",
+        "description": "Design APIs that developers love to use. The conventions, patterns, and common pitfalls to avoid.",
+        "tags": [
+          "api",
+          "rest",
+          "backend",
+          "best-practices"
+        ],
+        "date": "2022-08-10"
+      }
+    ],
+    "distributed systems": [
+      {
+        "slug": "cassandra-eventual-consistency",
+        "title": "Cassandra: the use case for eventual consistency",
+        "description": "When should one use an always available, network partitioned database for critical data?",
+        "tags": [
+          "distributed systems",
+          "storage"
+        ],
+        "date": "2017-12-07"
+      }
+    ],
+    "storage": [
+      {
+        "slug": "cassandra-eventual-consistency",
+        "title": "Cassandra: the use case for eventual consistency",
+        "description": "When should one use an always available, network partitioned database for critical data?",
+        "tags": [
+          "distributed systems",
+          "storage"
+        ],
+        "date": "2017-12-07"
+      }
+    ],
+    "cassandra": [
+      {
+        "slug": "cassandra-eventual-consistency",
+        "title": "Cassandra: the use case for eventual consistency",
+        "description": "When should one use an always available, network partitioned database for critical data?",
+        "tags": [
+          "distributed systems",
+          "storage"
+        ],
+        "date": "2017-12-07"
+      }
+    ],
+    "data": [
+      {
+        "slug": "cassandra-eventual-consistency",
+        "title": "Cassandra: the use case for eventual consistency",
+        "description": "When should one use an always available, network partitioned database for critical data?",
+        "tags": [
+          "distributed systems",
+          "storage"
+        ],
+        "date": "2017-12-07"
+      }
+    ],
+    "write": [
+      {
+        "slug": "cassandra-eventual-consistency",
+        "title": "Cassandra: the use case for eventual consistency",
+        "description": "When should one use an always available, network partitioned database for critical data?",
+        "tags": [
+          "distributed systems",
+          "storage"
+        ],
+        "date": "2017-12-07"
+      }
+    ],
+    "level": [
+      {
+        "slug": "cassandra-eventual-consistency",
+        "title": "Cassandra: the use case for eventual consistency",
+        "description": "When should one use an always available, network partitioned database for critical data?",
+        "tags": [
+          "distributed systems",
+          "storage"
+        ],
+        "date": "2017-12-07"
+      }
+    ],
+    "consistency": [
+      {
+        "slug": "cassandra-eventual-consistency",
+        "title": "Cassandra: the use case for eventual consistency",
+        "description": "When should one use an always available, network partitioned database for critical data?",
+        "tags": [
+          "distributed systems",
+          "storage"
+        ],
+        "date": "2017-12-07"
+      }
+    ],
+    "partition": [
+      {
+        "slug": "cassandra-eventual-consistency",
+        "title": "Cassandra: the use case for eventual consistency",
+        "description": "When should one use an always available, network partitioned database for critical data?",
+        "tags": [
+          "distributed systems",
+          "storage"
+        ],
+        "date": "2017-12-07"
+      }
+    ],
+    "node": [
+      {
+        "slug": "cassandra-eventual-consistency",
+        "title": "Cassandra: the use case for eventual consistency",
+        "description": "When should one use an always available, network partitioned database for critical data?",
+        "tags": [
+          "distributed systems",
+          "storage"
+        ],
+        "date": "2017-12-07"
+      }
+    ],
+    "cluster": [
+      {
+        "slug": "cassandra-eventual-consistency",
+        "title": "Cassandra: the use case for eventual consistency",
+        "description": "When should one use an always available, network partitioned database for critical data?",
+        "tags": [
+          "distributed systems",
+          "storage"
+        ],
+        "date": "2017-12-07"
+      }
+    ],
+    "nodes": [
+      {
+        "slug": "cassandra-eventual-consistency",
+        "title": "Cassandra: the use case for eventual consistency",
+        "description": "When should one use an always available, network partitioned database for critical data?",
+        "tags": [
+          "distributed systems",
+          "storage"
+        ],
+        "date": "2017-12-07"
+      }
+    ],
+    "replica": [
+      {
+        "slug": "cassandra-eventual-consistency",
+        "title": "Cassandra: the use case for eventual consistency",
+        "description": "When should one use an always available, network partitioned database for critical data?",
+        "tags": [
+          "distributed systems",
+          "storage"
+        ],
+        "date": "2017-12-07"
+      }
+    ],
+    "repair": [
+      {
+        "slug": "cassandra-eventual-consistency",
+        "title": "Cassandra: the use case for eventual consistency",
+        "description": "When should one use an always available, network partitioned database for critical data?",
+        "tags": [
+          "distributed systems",
+          "storage"
+        ],
+        "date": "2017-12-07"
+      }
+    ],
+    "record": [
+      {
+        "slug": "cassandra-eventual-consistency",
+        "title": "Cassandra: the use case for eventual consistency",
+        "description": "When should one use an always available, network partitioned database for critical data?",
+        "tags": [
+          "distributed systems",
+          "storage"
+        ],
+        "date": "2017-12-07"
+      }
+    ],
+    "lets": [
+      {
+        "slug": "cassandra-eventual-consistency",
+        "title": "Cassandra: the use case for eventual consistency",
+        "description": "When should one use an always available, network partitioned database for critical data?",
+        "tags": [
+          "distributed systems",
+          "storage"
+        ],
+        "date": "2017-12-07"
+      }
+    ],
+    "value": [
+      {
+        "slug": "cassandra-eventual-consistency",
+        "title": "Cassandra: the use case for eventual consistency",
+        "description": "When should one use an always available, network partitioned database for critical data?",
+        "tags": [
+          "distributed systems",
+          "storage"
+        ],
+        "date": "2017-12-07"
+      }
+    ],
+    "read": [
+      {
+        "slug": "cassandra-eventual-consistency",
+        "title": "Cassandra: the use case for eventual consistency",
+        "description": "When should one use an always available, network partitioned database for critical data?",
+        "tags": [
+          "distributed systems",
+          "storage"
+        ],
+        "date": "2017-12-07"
+      }
+    ],
+    "enterprise": [
+      {
+        "slug": "enterprise-trust-vs-process",
+        "title": "Enterprise Software Fails for Lack of Trust",
+        "description": "Why process replaces judgement when accountability drifts. And how to reverse it",
+        "tags": [
+          "enterprise"
+        ],
+        "date": "2025-12-28"
+      }
+    ],
+    "teams": [
+      {
+        "slug": "enterprise-trust-vs-process",
+        "title": "Enterprise Software Fails for Lack of Trust",
+        "description": "Why process replaces judgement when accountability drifts. And how to reverse it",
+        "tags": [
+          "enterprise"
+        ],
+        "date": "2025-12-28"
+      }
+    ],
+    "process": [
+      {
+        "slug": "enterprise-trust-vs-process",
+        "title": "Enterprise Software Fails for Lack of Trust",
+        "description": "Why process replaces judgement when accountability drifts. And how to reverse it",
+        "tags": [
+          "enterprise"
+        ],
+        "date": "2025-12-28"
+      }
+    ],
+    "risk": [
+      {
+        "slug": "enterprise-trust-vs-process",
+        "title": "Enterprise Software Fails for Lack of Trust",
+        "description": "Why process replaces judgement when accountability drifts. And how to reverse it",
+        "tags": [
+          "enterprise"
+        ],
+        "date": "2025-12-28"
+      }
+    ],
+    "accountability": [
+      {
+        "slug": "enterprise-trust-vs-process",
+        "title": "Enterprise Software Fails for Lack of Trust",
+        "description": "Why process replaces judgement when accountability drifts. And how to reverse it",
+        "tags": [
+          "enterprise"
+        ],
+        "date": "2025-12-28"
+      }
+    ],
+    "because": [
+      {
+        "slug": "enterprise-trust-vs-process",
+        "title": "Enterprise Software Fails for Lack of Trust",
+        "description": "Why process replaces judgement when accountability drifts. And how to reverse it",
+        "tags": [
+          "enterprise"
+        ],
+        "date": "2025-12-28"
+      }
+    ],
+    "trust": [
+      {
+        "slug": "enterprise-trust-vs-process",
+        "title": "Enterprise Software Fails for Lack of Trust",
+        "description": "Why process replaces judgement when accountability drifts. And how to reverse it",
+        "tags": [
+          "enterprise"
+        ],
+        "date": "2025-12-28"
+      }
+    ],
+    "software": [
+      {
+        "slug": "enterprise-trust-vs-process",
+        "title": "Enterprise Software Fails for Lack of Trust",
+        "description": "Why process replaces judgement when accountability drifts. And how to reverse it",
+        "tags": [
+          "enterprise"
+        ],
+        "date": "2025-12-28"
+      }
+    ],
+    "decisions": [
+      {
+        "slug": "enterprise-trust-vs-process",
+        "title": "Enterprise Software Fails for Lack of Trust",
+        "description": "Why process replaces judgement when accountability drifts. And how to reverse it",
+        "tags": [
+          "enterprise"
+        ],
+        "date": "2025-12-28"
+      }
+    ],
+    "decision": [
+      {
+        "slug": "enterprise-trust-vs-process",
+        "title": "Enterprise Software Fails for Lack of Trust",
+        "description": "Why process replaces judgement when accountability drifts. And how to reverse it",
+        "tags": [
+          "enterprise"
+        ],
+        "date": "2025-12-28"
+      }
+    ],
+    "recovery": [
+      {
+        "slug": "enterprise-trust-vs-process",
+        "title": "Enterprise Software Fails for Lack of Trust",
+        "description": "Why process replaces judgement when accountability drifts. And how to reverse it",
+        "tags": [
+          "enterprise"
+        ],
+        "date": "2025-12-28"
+      }
+    ],
+    "time": [
+      {
+        "slug": "enterprise-trust-vs-process",
+        "title": "Enterprise Software Fails for Lack of Trust",
+        "description": "Why process replaces judgement when accountability drifts. And how to reverse it",
+        "tags": [
+          "enterprise"
+        ],
+        "date": "2025-12-28"
+      }
+    ],
+    "expertise": [
+      {
+        "slug": "enterprise-trust-vs-process",
+        "title": "Enterprise Software Fails for Lack of Trust",
+        "description": "Why process replaces judgement when accountability drifts. And how to reverse it",
+        "tags": [
+          "enterprise"
+        ],
+        "date": "2025-12-28"
+      }
+    ],
+    "incentives": [
+      {
+        "slug": "enterprise-trust-vs-process",
+        "title": "Enterprise Software Fails for Lack of Trust",
+        "description": "Why process replaces judgement when accountability drifts. And how to reverse it",
+        "tags": [
+          "enterprise"
+        ],
+        "date": "2025-12-28"
+      }
+    ],
+    "must": [
+      {
+        "slug": "enterprise-trust-vs-process",
+        "title": "Enterprise Software Fails for Lack of Trust",
+        "description": "Why process replaces judgement when accountability drifts. And how to reverse it",
+        "tags": [
+          "enterprise"
+        ],
+        "date": "2025-12-28"
+      }
+    ]
+  },
+  "articles": [
+    {
+      "slug": "api-design-best-practices",
+      "title": "REST API Design Best Practices",
+      "description": "Design APIs that developers love to use. The conventions, patterns, and common pitfalls to avoid.",
+      "tags": [
+        "api",
+        "rest",
+        "backend",
+        "best-practices"
+      ],
+      "date": "2022-08-10",
+      "keywords": [
+        "api",
+        "rest",
+        "backend",
+        "best-practices",
+        "resources",
+        "consistent",
+        "design",
+        "status",
+        "codes",
+        "response",
+        "error",
+        "provide",
+        "pagination",
+        "filtering",
+        "sorting",
+        "authentication",
+        "gracefully",
+        "apis",
+        "nesting"
+      ]
+    },
+    {
+      "slug": "cassandra-eventual-consistency",
+      "title": "Cassandra: the use case for eventual consistency",
+      "description": "When should one use an always available, network partitioned database for critical data?",
+      "tags": [
+        "distributed systems",
+        "storage"
+      ],
+      "date": "2017-12-07",
+      "keywords": [
+        "distributed systems",
+        "storage",
+        "cassandra",
+        "data",
+        "write",
+        "level",
+        "consistency",
+        "partition",
+        "node",
+        "cluster",
+        "nodes",
+        "replica",
+        "repair",
+        "record",
+        "lets",
+        "value",
+        "read"
+      ]
+    },
+    {
+      "slug": "enterprise-trust-vs-process",
+      "title": "Enterprise Software Fails for Lack of Trust",
+      "description": "Why process replaces judgement when accountability drifts. And how to reverse it",
+      "tags": [
+        "enterprise"
+      ],
+      "date": "2025-12-28",
+      "keywords": [
+        "enterprise",
+        "teams",
+        "process",
+        "risk",
+        "accountability",
+        "because",
+        "trust",
+        "software",
+        "decisions",
+        "decision",
+        "recovery",
+        "time",
+        "expertise",
+        "incentives",
+        "must"
+      ]
+    }
+  ],
+  "metadata": {
+    "total_articles": 3,
+    "total_keywords": 51,
+    "generated_at": "BUILD_TIME"
+  }
+}
