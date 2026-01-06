@@ -11,7 +11,9 @@ interface SearchResult {
 }
 
 interface SearchResponse {
-  query: string;
+  query?: string;
+  tags?: string[];
+  availableTags?: string[];
   count: number;
   results: SearchResult[];
 }
@@ -107,10 +109,15 @@ export default function ArticleSearch({ allArticles }: Props) {
   const [isSearching, setIsSearching] = useState(false);
   const [isSearchActive, setIsSearchActive] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [selectedTags, setSelectedTags] = useState<string[]>([]);
+  const [availableTags, setAvailableTags] = useState<string[]>([]);
+  const [showTagDropdown, setShowTagDropdown] = useState(false);
   const debounceTimerRef = useRef<number | null>(null);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
-  const performSearch = useCallback(async (searchQuery: string) => {
-    if (!searchQuery.trim()) {
+  const performSearch = useCallback(async (searchQuery: string, tags: string[]) => {
+    // If no query and no tags, show all articles
+    if (!searchQuery.trim() && tags.length === 0) {
       setSearchResults([]);
       setIsSearchActive(false);
       return;
@@ -121,15 +128,27 @@ export default function ArticleSearch({ allArticles }: Props) {
     setError(null);
 
     try {
-      const response = await fetch(
-        `/api/search?q=${encodeURIComponent(searchQuery)}`
-      );
+      // Build query params
+      const params = new URLSearchParams();
+      if (searchQuery.trim()) {
+        params.set('q', searchQuery);
+      }
+      if (tags.length > 0) {
+        params.set('tags', tags.join(','));
+      }
+
+      const response = await fetch(`/api/search?${params.toString()}`);
 
       if (!response.ok) {
         throw new Error(`Search failed: ${response.status}`);
       }
 
       const data: SearchResponse = await response.json();
+
+      // Store available tags from the response
+      if (data.availableTags && data.availableTags.length > 0) {
+        setAvailableTags(data.availableTags);
+      }
 
       // Map search results to articles with reading time
       const resultsWithReadingTime = data.results.map((result) => {
@@ -158,6 +177,25 @@ export default function ArticleSearch({ allArticles }: Props) {
     }
   }, [allArticles]);
 
+  // Load available tags on mount
+  useEffect(() => {
+    const loadTags = async () => {
+      try {
+        // Make a dummy search to get available tags
+        const response = await fetch('/api/search?q=');
+        if (response.ok) {
+          const data: SearchResponse = await response.json();
+          if (data.availableTags) {
+            setAvailableTags(data.availableTags);
+          }
+        }
+      } catch (err) {
+        console.error('Failed to load tags:', err);
+      }
+    };
+    loadTags();
+  }, []);
+
   // Debounced search
   useEffect(() => {
     if (debounceTimerRef.current !== null) {
@@ -165,7 +203,7 @@ export default function ArticleSearch({ allArticles }: Props) {
     }
 
     debounceTimerRef.current = window.setTimeout(() => {
-      performSearch(query);
+      performSearch(query, selectedTags);
     }, 300);
 
     return () => {
@@ -173,13 +211,39 @@ export default function ArticleSearch({ allArticles }: Props) {
         clearTimeout(debounceTimerRef.current);
       }
     };
-  }, [query, performSearch]);
+  }, [query, selectedTags, performSearch]);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setShowTagDropdown(false);
+      }
+    }
+
+    if (showTagDropdown) {
+      document.addEventListener('mousedown', handleClickOutside);
+      return () => document.removeEventListener('mousedown', handleClickOutside);
+    }
+  }, [showTagDropdown]);
 
   const handleClearSearch = () => {
     setQuery('');
+    setSelectedTags([]);
     setSearchResults([]);
     setIsSearchActive(false);
     setError(null);
+  };
+
+  const handleTagSelect = (tag: string) => {
+    if (!selectedTags.includes(tag)) {
+      setSelectedTags([...selectedTags, tag]);
+    }
+    setShowTagDropdown(false);
+  };
+
+  const handleTagRemove = (tag: string) => {
+    setSelectedTags(selectedTags.filter((t) => t !== tag));
   };
 
   const displayedArticles = isSearchActive ? searchResults : allArticles;
@@ -188,41 +252,54 @@ export default function ArticleSearch({ allArticles }: Props) {
     <div>
       {/* Search Bar */}
       <div className="mb-8">
-        <div className="relative">
-          <input
-            type="text"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search articles by keywords, tags, or topics..."
-            className="w-full px-4 py-3 pl-12 pr-10 text-gray-900 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-600 focus:border-transparent"
-            aria-label="Search articles"
-          />
+        <div className="relative" ref={dropdownRef}>
+          {/* Selected Tags Chips */}
+          {selectedTags.length > 0 && (
+            <div className="flex flex-wrap gap-2 mb-3">
+              {selectedTags.map((tag) => (
+                <span
+                  key={tag}
+                  className="inline-flex items-center gap-1 px-3 py-1.5 text-sm font-medium bg-primary-100 text-primary-800 rounded-full"
+                >
+                  {tag}
+                  <button
+                    onClick={() => handleTagRemove(tag)}
+                    className="ml-1 text-primary-600 hover:text-primary-800 transition-colors"
+                    aria-label={`Remove ${tag} filter`}
+                  >
+                    <svg
+                      className="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M6 18L18 6M6 6l12 12"
+                      />
+                    </svg>
+                  </button>
+                </span>
+              ))}
+            </div>
+          )}
 
-          {/* Search Icon */}
-          <div className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400">
-            <svg
-              className="w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-              />
-            </svg>
-          </div>
+          <div className="relative">
+            <input
+              type="text"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              onFocus={() => setShowTagDropdown(true)}
+              placeholder="Search articles by keywords, tags, or topics..."
+              className="w-full px-4 py-3 pl-12 pr-10 text-gray-900 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-600 focus:border-transparent"
+              aria-label="Search articles"
+            />
 
-          {/* Clear Button */}
-          {query && (
-            <button
-              onClick={handleClearSearch}
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors"
-              aria-label="Clear search"
-            >
+            {/* Search Icon */}
+            <div className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400">
               <svg
                 className="w-5 h-5"
                 fill="none"
@@ -234,10 +311,63 @@ export default function ArticleSearch({ allArticles }: Props) {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
                 />
               </svg>
-            </button>
+            </div>
+
+            {/* Clear Button */}
+            {(query || selectedTags.length > 0) && (
+              <button
+                onClick={handleClearSearch}
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors"
+                aria-label="Clear search"
+              >
+                <svg
+                  className="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            )}
+          </div>
+
+          {/* Tag Dropdown */}
+          {showTagDropdown && availableTags.length > 0 && (
+            <div className="absolute z-10 w-full mt-2 bg-white border border-gray-300 rounded-lg shadow-lg max-h-60 overflow-y-auto">
+              <div className="p-2">
+                <div className="px-3 py-2 text-xs font-semibold text-gray-500 uppercase">
+                  Filter by tags
+                </div>
+                <div className="space-y-1">
+                  {availableTags
+                    .filter((tag) => !selectedTags.includes(tag))
+                    .map((tag) => (
+                      <button
+                        key={tag}
+                        onClick={() => handleTagSelect(tag)}
+                        className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded transition-colors"
+                      >
+                        {tag}
+                      </button>
+                    ))}
+                </div>
+                {availableTags.filter((tag) => !selectedTags.includes(tag)).length === 0 && (
+                  <div className="px-3 py-2 text-sm text-gray-500">
+                    All tags are selected
+                  </div>
+                )}
+              </div>
+            </div>
           )}
         </div>
 
@@ -254,7 +384,11 @@ export default function ArticleSearch({ allArticles }: Props) {
             ) : (
               <span>
                 Found {searchResults.length} article
-                {searchResults.length !== 1 ? 's' : ''} matching &quot;{query}&quot;
+                {searchResults.length !== 1 ? 's' : ''}
+                {query && ` matching "${query}"`}
+                {selectedTags.length > 0 && (
+                  <> with tag{selectedTags.length !== 1 ? 's' : ''}: {selectedTags.join(', ')}</>
+                )}
               </span>
             )}
           </div>

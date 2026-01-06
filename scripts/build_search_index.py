@@ -108,6 +108,7 @@ def build_search_index() -> Dict[str, Any]:
     """
     index: Dict[str, List[str]] = {}  # keyword -> [slugs]
     articles: Dict[str, Dict[str, Any]] = {}  # slug -> metadata
+    all_tags: set = set()  # Collect all unique tags
 
     # Find all article index.md files
     article_files = list(ARTICLES_DIR.glob("*/index.md"))
@@ -128,6 +129,9 @@ def build_search_index() -> Dict[str, Any]:
         description = frontmatter.get('description', '')
         tags = frontmatter.get('tags', [])
         date = str(frontmatter.get('date', ''))
+
+        # Collect tags for the global tag list
+        all_tags.update(tags)
 
         # Extract words from content
         words = extract_words(body)
@@ -163,12 +167,17 @@ def build_search_index() -> Dict[str, Any]:
 
         print(f"  ✓ {article_slug}: {len(unique_keywords)} keywords")
 
+    # Sort tags alphabetically
+    sorted_tags = sorted(all_tags)
+
     return {
         "index": index,
         "articles": articles,
+        "tags": sorted_tags,  # Add all unique tags
         "metadata": {
             "total_articles": len(articles),
             "total_keywords": len(index),
+            "total_tags": len(sorted_tags),
             "generated_at": "BUILD_TIME"
         }
     }
@@ -194,6 +203,7 @@ def main():
     print(f"\n✓ Search index generated: {OUTPUT_FILE}")
     print(f"  - {search_data['metadata']['total_articles']} articles")
     print(f"  - {search_data['metadata']['total_keywords']} unique keywords")
+    print(f"  - {search_data['metadata']['total_tags']} unique tags")
 
 
 if __name__ == "__main__":

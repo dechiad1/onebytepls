@@ -23,9 +23,11 @@ interface SearchIndexArticle {
 interface SearchIndex {
   index: Record<string, string[]>; // keyword -> article slugs
   articles: Record<string, SearchIndexArticle>; // slug -> article metadata
+  tags: string[]; // All unique tags
   metadata: {
     total_articles: number;
     total_keywords: number;
+    total_tags: number;
     generated_at: string;
   };
 }
@@ -38,6 +40,8 @@ interface SearchResult extends SearchIndexArticle {
 
 interface SearchResponse {
   query?: string;
+  tags?: string[]; // Selected tag filters
+  availableTags?: string[]; // All available tags
   count?: number;
   results: SearchResult[];
   error?: string;
@@ -64,49 +68,76 @@ function partialMatch(query: string, keyword: string): boolean {
 }
 
 /**
- * Search articles by query string
+ * Search articles by query string and tags
  */
 function searchArticles(
   searchIndex: SearchIndex,
-  query: string
+  query: string,
+  selectedTags: string[] = []
 ): SearchResult[] {
-  if (!query || query.trim().length === 0) {
-    return [];
-  }
-
-  const queryTerms = query
-    .toLowerCase()
-    .split(/\s+/)
-    .filter((term) => term.length > 0);
-
   // Map to store articles with their relevance scores
   const resultsMap = new Map<string, SearchResult>();
 
-  // Search through the keyword index
-  for (const [keyword, slugs] of Object.entries(searchIndex.index)) {
-    for (const queryTerm of queryTerms) {
-      if (partialMatch(queryTerm, keyword)) {
-        // Add or update articles that match this keyword
-        for (const slug of slugs) {
-          const existing = resultsMap.get(slug);
+  // If we have tag filters, start by filtering articles with matching tags
+  if (selectedTags.length > 0) {
+    const selectedTagsLower = selectedTags.map(t => t.toLowerCase());
 
-          if (existing) {
-            // Increase relevance and add matched keyword
-            existing.relevance += 1;
-            if (!existing.matchedKeywords.includes(keyword)) {
-              existing.matchedKeywords.push(keyword);
-            }
-          } else {
-            // Look up article metadata
-            const article = searchIndex.articles[slug];
-            if (article) {
-              // Create new result entry
-              resultsMap.set(slug, {
-                slug,
-                ...article,
-                relevance: 1,
-                matchedKeywords: [keyword],
-              });
+    for (const [slug, article] of Object.entries(searchIndex.articles)) {
+      // Check if article has ALL selected tags (AND logic)
+      const articleTagsLower = article.tags.map(t => t.toLowerCase());
+      const hasAllTags = selectedTagsLower.every(tag =>
+        articleTagsLower.includes(tag)
+      );
+
+      if (hasAllTags) {
+        resultsMap.set(slug, {
+          slug,
+          ...article,
+          relevance: selectedTags.length, // Base relevance from tag matches
+          matchedKeywords: [],
+        });
+      }
+    }
+  }
+
+  // If there's a text query, search through keywords
+  if (query && query.trim().length > 0) {
+    const queryTerms = query
+      .toLowerCase()
+      .split(/\s+/)
+      .filter((term) => term.length > 0);
+
+    // Search through the keyword index
+    for (const [keyword, slugs] of Object.entries(searchIndex.index)) {
+      for (const queryTerm of queryTerms) {
+        if (partialMatch(queryTerm, keyword)) {
+          // Add or update articles that match this keyword
+          for (const slug of slugs) {
+            const existing = resultsMap.get(slug);
+
+            if (existing) {
+              // Increase relevance and add matched keyword
+              existing.relevance += 1;
+              if (!existing.matchedKeywords.includes(keyword)) {
+                existing.matchedKeywords.push(keyword);
+              }
+            } else {
+              // If we have tag filters, only include articles that passed the tag filter
+              if (selectedTags.length > 0) {
+                continue; // Skip articles that don't match tag filters
+              }
+
+              // Look up article metadata
+              const article = searchIndex.articles[slug];
+              if (article) {
+                // Create new result entry
+                resultsMap.set(slug, {
+                  slug,
+                  ...article,
+                  relevance: 1,
+                  matchedKeywords: [keyword],
+                });
+              }
             }
           }
         }
@@ -165,19 +196,11 @@ async function handleSearch(request: Request, env: Env): Promise<Response> {
       );
     }
 
-    // Parse query parameter
+    // Parse query parameters
     const url = new URL(request.url);
-    const query = url.searchParams.get("q");
-
-    if (!query) {
-      return jsonResponse(
-        {
-          error: "Missing query parameter. Use ?q=your-search-term",
-          results: [],
-        },
-        400
-      );
-    }
+    const query = url.searchParams.get("q") || "";
+    const tagsParam = url.searchParams.get("tags");
+    const selectedTags = tagsParam ? tagsParam.split(",").filter(t => t.length > 0) : [];
 
     // Fetch the search index
     const isLocal = env.ENVIRONMENT === 'development';
@@ -202,11 +225,13 @@ async function handleSearch(request: Request, env: Env): Promise<Response> {
     }
 
     // Perform search
-    const results = searchArticles(searchIndex, query);
+    const results = searchArticles(searchIndex, query, selectedTags);
 
     // Return results
     return jsonResponse({
-      query,
+      query: query || undefined,
+      tags: selectedTags.length > 0 ? selectedTags : undefined,
+      availableTags: searchIndex.tags,
       count: results.length,
       results,
     });
