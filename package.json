@@ -4,9 +4,9 @@
   "version": "1.0.0",
   "description": "Personal website for technical writing - One Byte Please",
   "scripts": {
-    "dev": "astro dev",
-    "dev:full": "wrangler pages dev --proxy 4321",
-    "dev:functions": "wrangler pages dev dist --port 8788",
+    "dev:fe": "astro dev",
+    "dev:full": "concurrently \"npm run dev:fe\" \"npm run dev:be\" --names \"astro,wrangler\" --prefix-colors \"cyan,magenta\"",
+    "dev:be": "wrangler dev --port 8788",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
@@ -26,6 +26,7 @@
     "tailwindcss": "^4.1.18"
   },
   "devDependencies": {
+    "concurrently": "^9.2.1",
     "wrangler": "^4.54.0"
   }
 }

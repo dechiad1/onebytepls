@@ -1,21 +1,22 @@
 version: '3'
 
 tasks:
-  dev:
+  dev:fe:
     desc: Start local development server with hot reload
     cmds:
       - npm run dev
-
-  dev:full:
-    desc: Start dev server with Cloudflare Functions (hot reload + /api/search endpoint)
-    cmds:
-      - npm run dev:full
-
-  dev:functions:
+  
+  dev:be:
     desc: Run production build locally with Cloudflare Functions
     cmds:
       - task: build
-      - npm run dev:functions
+      - npm run dev:be
+
+  dev:full:
+    desc: Start Astro dev server (4321) + Wrangler Worker (8788) with hot reload
+    cmds:
+      - task: build
+      - npm run dev:full
 
   create:
     desc: Create a new article folder in src/content/articles
@@ -50,15 +51,27 @@ tasks:
     requires:
       vars: [CLI_ARGS]
 
-  build-index:
-    desc: Generate search index from articles
+  scripts:setup:
+    desc: Setup Python virtual environment and install dependencies
     cmds:
-      - python3 scripts/build_search_index.py
+      - python3 -m venv scripts/.venv
+      - scripts/.venv/bin/pip install -r scripts/requirements.txt
+    sources:
+      - scripts/requirements.txt
+    generates:
+      - scripts/.venv/bin/activate
+
+  index:build:
+    desc: Generate search index from articles
+    deps:
+      - scripts:setup
+    cmds:
+      - scripts/.venv/bin/python scripts/build_search_index.py
 
   build:
     desc: Build the site for production
     cmds:
-      - task: build-index
+      - task: index:build
       - npm run build
 
   preview:
@@ -66,8 +79,19 @@ tasks:
     cmds:
       - npm run preview
 
-  deploy:local:
-    desc: manually push dist to cloudflare r2
+  r2:create:
+    desc: Create R2 bucket for search index
     cmds:
-      - npm run build
-      - npx wrangler deploy --assets=./dist
+      - npx wrangler r2 bucket create onebytepls-search-index
+
+  r2:upload:
+    desc: Upload search index to R2 bucket
+    cmds:
+      - npx wrangler r2 object put onebytepls-search-index/search-index.json --file=public/search-index.json --remote
+
+  deploy:
+    desc: Build, upload search index to R2, and deploy Worker to Cloudflare
+    cmds:
+      - task: build
+      - task: r2:upload
+      - npx wrangler deploy

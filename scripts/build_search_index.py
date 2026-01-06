@@ -11,16 +11,17 @@ This script:
 
 import json
 import re
+import yaml
 from pathlib import Path
 from collections import Counter
 from typing import List, Dict, Any
-import yaml
 
 # Configuration
 ARTICLES_DIR = Path("src/content/articles")
-OUTPUT_FILE = Path("public/search-index.json")
+OUTPUT_FILE = Path("public/search-index.json")  # Astro will copy to dist/ during build
 MIN_WORD_LENGTH = 4
-TOP_KEYWORDS_COUNT = 15
+TOP_KEYWORDS_COUNT = 30  # Increased from 15
+MIN_KEYWORD_FREQUENCY = 3  # Include any word appearing 3+ times
 STOPWORDS = {
     "this", "that", "with", "from", "have", "will", "your", "they",
     "been", "were", "their", "there", "these", "those", "would",
@@ -78,12 +79,24 @@ def extract_words(text: str) -> List[str]:
     return words
 
 
-def get_top_keywords(words: List[str], count: int = TOP_KEYWORDS_COUNT) -> List[str]:
+def get_top_keywords(words: List[str]) -> List[str]:
     """
-    Get top N most frequent keywords from word list.
+    Get keywords from word list using both frequency and top-N approaches.
+    Returns top N most frequent words PLUS any word appearing MIN_KEYWORD_FREQUENCY+ times.
     """
     word_counts = Counter(words)
-    return [word for word, _ in word_counts.most_common(count)]
+
+    # Get top N most frequent
+    top_n = {word for word, _ in word_counts.most_common(TOP_KEYWORDS_COUNT)}
+
+    # Get all words above frequency threshold
+    frequent = {word for word, count in word_counts.items() if count >= MIN_KEYWORD_FREQUENCY}
+
+    # Combine both sets and sort by frequency (descending)
+    combined = top_n | frequent
+    sorted_keywords = sorted(combined, key=lambda w: word_counts[w], reverse=True)
+
+    return sorted_keywords
 
 
 def build_search_index() -> Dict[str, Any]:
@@ -91,10 +104,10 @@ def build_search_index() -> Dict[str, Any]:
     Build the search index from all articles.
 
     Returns:
-        Dictionary mapping keywords to article metadata
+        Dictionary with keyword index and article lookup
     """
-    index: Dict[str, List[Dict[str, Any]]] = {}
-    articles: List[Dict[str, Any]] = []
+    index: Dict[str, List[str]] = {}  # keyword -> [slugs]
+    articles: Dict[str, Dict[str, Any]] = {}  # slug -> metadata
 
     # Find all article index.md files
     article_files = list(ARTICLES_DIR.glob("*/index.md"))
@@ -134,32 +147,19 @@ def build_search_index() -> Dict[str, Any]:
                 seen.add(keyword_lower)
                 unique_keywords.append(keyword_lower)
 
-        # Create article metadata
-        article_metadata = {
-            "slug": article_slug,
+        # Store article metadata once (without keywords to save space)
+        articles[article_slug] = {
             "title": title,
             "description": description,
             "tags": tags,
-            "date": date,
-            "keywords": unique_keywords
+            "date": date
         }
 
-        articles.append(article_metadata)
-
-        # Build keyword index
+        # Build keyword index with just slugs
         for keyword in unique_keywords:
             if keyword not in index:
                 index[keyword] = []
-
-            # Add article reference (without keywords to avoid duplication)
-            article_ref = {
-                "slug": article_slug,
-                "title": title,
-                "description": description,
-                "tags": tags,
-                "date": date
-            }
-            index[keyword].append(article_ref)
+            index[keyword].append(article_slug)
 
         print(f"  ✓ {article_slug}: {len(unique_keywords)} keywords")
 

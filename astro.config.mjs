@@ -17,6 +17,15 @@ export default defineConfig({
 
   vite: {
     plugins: [tailwindcss()],
+    server: {
+      proxy: {
+        // Proxy API requests to Wrangler dev server
+        '/api': {
+          target: 'http://localhost:8788',
+          changeOrigin: true,
+        },
+      },
+    },
   },
 
   integrations: [react(), sitemap()],

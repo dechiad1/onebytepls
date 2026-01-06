@@ -1,10 +1,17 @@
 {
-  "$schema": "./node_modules/wrangler/config-schema.json",
-  "name": "onebytepls",
-  "compatibility_date": "2026-01-04",
-  "assets": {
-    "directory": "dist"
-  },
+	"$schema": "./node_modules/wrangler/config-schema.json",
+	"name": "onebytepls",
+	"compatibility_date": "2026-01-04",
+	"main": "worker/index.ts",
+	"assets": {
+		"directory": "dist"
+	},
+	"r2_buckets": [
+		{
+			"binding": "SEARCH_INDEX_BUCKET",
+			"bucket_name": "onebytepls-search-index"
+		}
+	],
 	"routes": [
 		{
 			"pattern": "onebytepls.com",
