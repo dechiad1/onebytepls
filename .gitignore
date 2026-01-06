@@ -1,11 +1,17 @@
 # build output
 dist/
 
-# generated 
+# generated
 .astro/
+.wrangler/
 
 # dependencies
 node_modules/
+
+# Python
+scripts/.venv/
+__pycache__/
+*.pyc
 
 # logs
 npm-debug.log*
@@ -17,6 +23,7 @@ pnpm-debug.log*
 .env
 .env.local
 .env.production
+.dev.vars
 
 # macOS-specific files
 .DS_Store
