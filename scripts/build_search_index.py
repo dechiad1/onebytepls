@@ -104,11 +104,11 @@ def build_search_index() -> Dict[str, Any]:
     Build the search index from all articles.
 
     Returns:
-        Dictionary with keyword index and article lookup
+        Dictionary with keyword index, tag index, and article lookup
     """
     index: Dict[str, List[str]] = {}  # keyword -> [slugs]
+    tag_index: Dict[str, List[str]] = {}  # tag -> [slugs]
     articles: Dict[str, Dict[str, Any]] = {}  # slug -> metadata
-    all_tags: set = set()  # Collect all unique tags
 
     # Find all article index.md files
     article_files = list(ARTICLES_DIR.glob("*/index.md"))
@@ -129,9 +129,6 @@ def build_search_index() -> Dict[str, Any]:
         description = frontmatter.get('description', '')
         tags = frontmatter.get('tags', [])
         date = str(frontmatter.get('date', ''))
-
-        # Collect tags for the global tag list
-        all_tags.update(tags)
 
         # Extract words from content
         words = extract_words(body)
@@ -165,19 +162,31 @@ def build_search_index() -> Dict[str, Any]:
                 index[keyword] = []
             index[keyword].append(article_slug)
 
-        print(f"  ✓ {article_slug}: {len(unique_keywords)} keywords")
+        # Build tag index with just slugs
+        for tag in tags:
+            tag_lower = tag.lower()
+            if tag_lower not in tag_index:
+                tag_index[tag_lower] = []
+            tag_index[tag_lower].append(article_slug)
 
-    # Sort tags alphabetically
-    sorted_tags = sorted(all_tags)
+        print(f"  ✓ {article_slug}: {len(unique_keywords)} keywords, {len(tags)} tags")
+
+    # Get all unique tags from tag index (already lowercase)
+    sorted_tags = sorted(tag_index.keys())
+
+    # Sort keywords alphabetically for efficient binary search
+    sorted_keywords = sorted(index.keys())
 
     return {
         "index": index,
+        "keywords": sorted_keywords,  # Sorted list for binary search
+        "tagIndex": tag_index,
         "articles": articles,
-        "tags": sorted_tags,  # Add all unique tags
+        "tags": sorted_tags,
         "metadata": {
             "total_articles": len(articles),
             "total_keywords": len(index),
-            "total_tags": len(sorted_tags),
+            "total_tags": len(tag_index),
             "generated_at": "BUILD_TIME"
         }
     }

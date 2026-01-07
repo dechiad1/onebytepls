@@ -12,6 +12,12 @@
 			"bucket_name": "onebytepls-search-index"
 		}
 	],
+	"analytics_engine_datasets": [
+		{
+			"binding": "ANALYTICS",
+			"dataset": "search_metrics"
+		}
+	],
 	"routes": [
 		{
 			"pattern": "onebytepls.com",
