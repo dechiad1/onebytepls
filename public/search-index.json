@@ -6,12 +6,6 @@
     "rest": [
       "api-design-best-practices"
     ],
-    "backend": [
-      "api-design-best-practices"
-    ],
-    "best-practices": [
-      "api-design-best-practices"
-    ],
     "resources": [
       "api-design-best-practices"
     ],
@@ -19,23 +13,29 @@
       "api-design-best-practices",
       "cassandra-eventual-consistency"
     ],
-    "codes": [
-      "api-design-best-practices"
-    ],
-    "filtering": [
-      "api-design-best-practices"
-    ],
-    "authentication": [
+    "provide": [
       "api-design-best-practices"
     ],
     "design": [
       "api-design-best-practices",
       "enterprise-trust-vs-process"
     ],
+    "pagination": [
+      "api-design-best-practices"
+    ],
+    "codes": [
+      "api-design-best-practices"
+    ],
     "error": [
       "api-design-best-practices"
     ],
-    "pagination": [
+    "sorting": [
+      "api-design-best-practices"
+    ],
+    "authentication": [
+      "api-design-best-practices"
+    ],
+    "filtering": [
       "api-design-best-practices"
     ],
     "status": [
@@ -44,64 +44,58 @@
     "response": [
       "api-design-best-practices"
     ],
-    "sorting": [
-      "api-design-best-practices"
-    ],
-    "provide": [
+    "methods": [
       "api-design-best-practices"
     ],
     "token": [
       "api-design-best-practices"
     ],
-    "responses": [
-      "api-design-best-practices"
-    ],
-    "searching": [
-      "api-design-best-practices"
-    ],
-    "apis": [
-      "api-design-best-practices"
-    ],
-    "return": [
-      "api-design-best-practices"
-    ],
-    "examples": [
-      "api-design-best-practices"
-    ],
-    "document": [
-      "api-design-best-practices"
-    ],
-    "user": [
-      "api-design-best-practices"
-    ],
-    "http": [
-      "api-design-best-practices"
-    ],
-    "nesting": [
-      "api-design-best-practices"
-    ],
     "gracefully": [
       "api-design-best-practices"
     ],
-    "methods": [
+    "responses": [
       "api-design-best-practices"
     ],
     "include": [
       "api-design-best-practices"
     ],
-    "intuitive": [
+    "examples": [
       "api-design-best-practices"
     ],
-    "handles": [
+    "nesting": [
+      "api-design-best-practices"
+    ],
+    "apis": [
+      "api-design-best-practices"
+    ],
+    "user": [
+      "api-design-best-practices"
+    ],
+    "searching": [
+      "api-design-best-practices"
+    ],
+    "return": [
+      "api-design-best-practices"
+    ],
+    "document": [
+      "api-design-best-practices"
+    ],
+    "http": [
+      "api-design-best-practices"
+    ],
+    "intuitive": [
       "api-design-best-practices"
     ],
     "work": [
       "api-design-best-practices"
     ],
+    "edge": [
+      "api-design-best-practices"
+    ],
     "designed": [
       "api-design-best-practices"
     ],
-    "edge": [
+    "handles": [
       "api-design-best-practices"
     ],
     "distributed systems": [
@@ -149,10 +143,13 @@
     "read": [
       "cassandra-eventual-consistency"
     ],
+    "lets": [
+      "cassandra-eventual-consistency"
+    ],
     "value": [
       "cassandra-eventual-consistency"
     ],
-    "lets": [
+    "hash": [
       "cassandra-eventual-consistency"
     ],
     "client": [
@@ -164,94 +161,56 @@
     "memory": [
       "cassandra-eventual-consistency"
     ],
-    "hash": [
-      "cassandra-eventual-consistency"
-    ],
     "disk": [
-      "cassandra-eventual-consistency"
-    ],
-    "factor": [
-      "cassandra-eventual-consistency"
-    ],
-    "setting": [
-      "cassandra-eventual-consistency"
-    ],
-    "block": [
-      "cassandra-eventual-consistency"
-    ],
-    "single": [
       "cassandra-eventual-consistency"
     ],
     "high": [
       "cassandra-eventual-consistency"
     ],
+    "successful": [
+      "cassandra-eventual-consistency"
+    ],
+    "setting": [
+      "cassandra-eventual-consistency"
+    ],
     "replication": [
+      "cassandra-eventual-consistency"
+    ],
+    "single": [
+      "cassandra-eventual-consistency"
+    ],
+    "factor": [
       "cassandra-eventual-consistency"
     ],
     "latency": [
       "cassandra-eventual-consistency",
       "enterprise-trust-vs-process"
     ],
-    "successful": [
-      "cassandra-eventual-consistency"
-    ],
     "many": [
       "cassandra-eventual-consistency"
     ],
-    "require": [
-      "cassandra-eventual-consistency",
-      "enterprise-trust-vs-process"
-    ],
-    "concept": [
-      "cassandra-eventual-consistency"
-    ],
-    "system": [
+    "block": [
       "cassandra-eventual-consistency"
     ],
     "quorum": [
       "cassandra-eventual-consistency"
     ],
-    "right": [
-      "cassandra-eventual-consistency"
-    ],
-    "stored": [
-      "cassandra-eventual-consistency"
-    ],
-    "stores": [
-      "cassandra-eventual-consistency"
-    ],
-    "keys": [
-      "cassandra-eventual-consistency"
-    ],
-    "does": [
+    "concept": [
       "cassandra-eventual-consistency"
     ],
     "flush": [
       "cassandra-eventual-consistency"
     ],
-    "responsible": [
+    "impact": [
       "cassandra-eventual-consistency"
     ],
-    "performing": [
+    "system": [
       "cassandra-eventual-consistency"
     ],
-    "occurs": [
+    "stores": [
       "cassandra-eventual-consistency"
     ],
     "tells": [
-      "cassandra-eventual-consistency"
-    ],
-    "large": [
-      "cassandra-eventual-consistency"
-    ],
-    "process": [
-      "cassandra-eventual-consistency",
-      "enterprise-trust-vs-process"
-    ],
-    "across": [
-      "cassandra-eventual-consistency"
-    ],
-    "impact": [
       "cassandra-eventual-consistency"
     ],
     "must": [
@@ -261,20 +220,55 @@
     "allows": [
       "cassandra-eventual-consistency"
     ],
-    "production": [
+    "tradeoffs": [
       "cassandra-eventual-consistency"
     ],
+    "performing": [
+      "cassandra-eventual-consistency"
+    ],
+    "keys": [
+      "cassandra-eventual-consistency"
+    ],
+    "process": [
+      "cassandra-eventual-consistency",
+      "enterprise-trust-vs-process"
+    ],
     "records": [
+      "cassandra-eventual-consistency"
+    ],
+    "large": [
+      "cassandra-eventual-consistency"
+    ],
+    "require": [
+      "cassandra-eventual-consistency",
+      "enterprise-trust-vs-process"
+    ],
+    "right": [
+      "cassandra-eventual-consistency"
+    ],
+    "production": [
       "cassandra-eventual-consistency"
     ],
     "time": [
       "cassandra-eventual-consistency",
       "enterprise-trust-vs-process"
     ],
+    "stored": [
+      "cassandra-eventual-consistency"
+    ],
     "database": [
       "cassandra-eventual-consistency"
     ],
-    "tradeoffs": [
+    "responsible": [
+      "cassandra-eventual-consistency"
+    ],
+    "occurs": [
+      "cassandra-eventual-consistency"
+    ],
+    "does": [
+      "cassandra-eventual-consistency"
+    ],
+    "across": [
       "cassandra-eventual-consistency"
     ],
     "enterprise": [
@@ -283,28 +277,28 @@
     "teams": [
       "enterprise-trust-vs-process"
     ],
-    "risk": [
-      "enterprise-trust-vs-process"
-    ],
     "accountability": [
       "enterprise-trust-vs-process"
     ],
-    "because": [
+    "risk": [
       "enterprise-trust-vs-process"
     ],
     "trust": [
       "enterprise-trust-vs-process"
     ],
-    "decisions": [
-      "enterprise-trust-vs-process"
-    ],
-    "decision": [
+    "because": [
       "enterprise-trust-vs-process"
     ],
     "recovery": [
       "enterprise-trust-vs-process"
     ],
+    "decisions": [
+      "enterprise-trust-vs-process"
+    ],
     "software": [
+      "enterprise-trust-vs-process"
+    ],
+    "decision": [
       "enterprise-trust-vs-process"
     ],
     "incentives": [
@@ -313,58 +307,195 @@
     "expertise": [
       "enterprise-trust-vs-process"
     ],
-    "rather": [
-      "enterprise-trust-vs-process"
-    ],
     "disaster": [
       "enterprise-trust-vs-process"
     ],
     "systems": [
       "enterprise-trust-vs-process"
     ],
+    "rather": [
+      "enterprise-trust-vs-process"
+    ],
     "explicit": [
-      "enterprise-trust-vs-process"
-    ],
-    "align": [
-      "enterprise-trust-vs-process"
-    ],
-    "failures": [
-      "enterprise-trust-vs-process"
-    ],
-    "offs": [
-      "enterprise-trust-vs-process"
-    ],
-    "organization": [
-      "enterprise-trust-vs-process"
-    ],
-    "business": [
       "enterprise-trust-vs-process"
     ],
     "cost": [
       "enterprise-trust-vs-process"
     ],
-    "trade": [
+    "failures": [
       "enterprise-trust-vs-process"
     ],
     "central": [
       "enterprise-trust-vs-process"
     ],
-    "mirror": [
-      "enterprise-trust-vs-process"
-    ],
-    "outcomes": [
-      "enterprise-trust-vs-process"
-    ],
-    "mistrust": [
-      "enterprise-trust-vs-process"
-    ],
-    "governance": [
+    "trade": [
       "enterprise-trust-vs-process"
     ],
     "role": [
       "enterprise-trust-vs-process"
     ],
+    "align": [
+      "enterprise-trust-vs-process"
+    ],
+    "governance": [
+      "enterprise-trust-vs-process"
+    ],
+    "organization": [
+      "enterprise-trust-vs-process"
+    ],
     "deep": [
+      "enterprise-trust-vs-process"
+    ],
+    "mirror": [
+      "enterprise-trust-vs-process"
+    ],
+    "business": [
+      "enterprise-trust-vs-process"
+    ],
+    "mistrust": [
+      "enterprise-trust-vs-process"
+    ],
+    "offs": [
+      "enterprise-trust-vs-process"
+    ],
+    "outcomes": [
+      "enterprise-trust-vs-process"
+    ]
+  },
+  "keywords": [
+    "accountability",
+    "across",
+    "align",
+    "allows",
+    "api",
+    "apis",
+    "authentication",
+    "because",
+    "block",
+    "business",
+    "cassandra",
+    "central",
+    "client",
+    "cluster",
+    "codes",
+    "concept",
+    "consistency",
+    "consistent",
+    "cost",
+    "data",
+    "database",
+    "decision",
+    "decisions",
+    "deep",
+    "design",
+    "designed",
+    "disaster",
+    "disk",
+    "distributed systems",
+    "document",
+    "does",
+    "edge",
+    "enterprise",
+    "error",
+    "examples",
+    "expertise",
+    "explicit",
+    "factor",
+    "failures",
+    "filtering",
+    "flush",
+    "governance",
+    "gracefully",
+    "handles",
+    "hash",
+    "high",
+    "http",
+    "impact",
+    "incentives",
+    "include",
+    "intuitive",
+    "keys",
+    "large",
+    "latency",
+    "lets",
+    "level",
+    "many",
+    "memory",
+    "methods",
+    "mirror",
+    "mistrust",
+    "must",
+    "nesting",
+    "node",
+    "nodes",
+    "occurs",
+    "offs",
+    "organization",
+    "outcomes",
+    "pagination",
+    "partition",
+    "performing",
+    "process",
+    "production",
+    "provide",
+    "quorum",
+    "rather",
+    "read",
+    "record",
+    "records",
+    "recovery",
+    "repair",
+    "replica",
+    "replication",
+    "request",
+    "require",
+    "resources",
+    "response",
+    "responses",
+    "responsible",
+    "rest",
+    "return",
+    "right",
+    "risk",
+    "role",
+    "searching",
+    "setting",
+    "single",
+    "software",
+    "sorting",
+    "status",
+    "storage",
+    "stored",
+    "stores",
+    "successful",
+    "system",
+    "systems",
+    "teams",
+    "tells",
+    "time",
+    "token",
+    "trade",
+    "tradeoffs",
+    "trust",
+    "user",
+    "value",
+    "work",
+    "write"
+  ],
+  "tagIndex": {
+    "api": [
+      "api-design-best-practices"
+    ],
+    "rest": [
+      "api-design-best-practices"
+    ],
+    "distributed systems": [
+      "cassandra-eventual-consistency"
+    ],
+    "storage": [
+      "cassandra-eventual-consistency"
+    ],
+    "enterprise": [
       "enterprise-trust-vs-process"
     ]
   },
@@ -374,9 +505,7 @@
       "description": "Design APIs that developers love to use. The conventions, patterns, and common pitfalls to avoid.",
       "tags": [
         "api",
-        "rest",
-        "backend",
-        "best-practices"
+        "rest"
       ],
       "date": "2022-08-10"
     },
@@ -398,9 +527,17 @@
       "date": "2025-12-28"
     }
   },
+  "tags": [
+    "api",
+    "distributed systems",
+    "enterprise",
+    "rest",
+    "storage"
+  ],
   "metadata": {
     "total_articles": 3,
-    "total_keywords": 120,
+    "total_keywords": 118,
+    "total_tags": 5,
     "generated_at": "BUILD_TIME"
   }
 }

@@ -5,8 +5,6 @@ description: "Design APIs that developers love to use. The conventions, patterns
 tags:
   - api
   - rest
-  - backend
-  - best-practices
 ---
 
 A well-designed API is a joy to work with. It is intuitive, consistent, & handles edge cases gracefully. This guide covers the principles that make APIs developer-friendly.

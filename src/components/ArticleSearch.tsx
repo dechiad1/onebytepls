@@ -11,7 +11,9 @@ interface SearchResult {
 }
 
 interface SearchResponse {
-  query: string;
+  query?: string;
+  tags?: string[];
+  availableTags?: string[];
   count: number;
   results: SearchResult[];
 }
@@ -107,10 +109,13 @@ export default function ArticleSearch({ allArticles }: Props) {
   const [isSearching, setIsSearching] = useState(false);
   const [isSearchActive, setIsSearchActive] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [selectedTags, setSelectedTags] = useState<string[]>([]);
+  const [availableTags, setAvailableTags] = useState<string[]>([]);
   const debounceTimerRef = useRef<number | null>(null);
 
-  const performSearch = useCallback(async (searchQuery: string) => {
-    if (!searchQuery.trim()) {
+  const performSearch = useCallback(async (searchQuery: string, tags: string[]) => {
+    // If no query and no tags, show all articles
+    if (!searchQuery.trim() && tags.length === 0) {
       setSearchResults([]);
       setIsSearchActive(false);
       return;
@@ -121,15 +126,27 @@ export default function ArticleSearch({ allArticles }: Props) {
     setError(null);
 
     try {
-      const response = await fetch(
-        `/api/search?q=${encodeURIComponent(searchQuery)}`
-      );
+      // Build query params
+      const params = new URLSearchParams();
+      if (searchQuery.trim()) {
+        params.set('q', searchQuery);
+      }
+      if (tags.length > 0) {
+        params.set('tags', tags.join(','));
+      }
+
+      const response = await fetch(`/api/search?${params.toString()}`);
 
       if (!response.ok) {
         throw new Error(`Search failed: ${response.status}`);
       }
 
       const data: SearchResponse = await response.json();
+
+      // Store available tags from the response
+      if (data.availableTags && data.availableTags.length > 0) {
+        setAvailableTags(data.availableTags);
+      }
 
       // Map search results to articles with reading time
       const resultsWithReadingTime = data.results.map((result) => {
@@ -158,6 +175,25 @@ export default function ArticleSearch({ allArticles }: Props) {
     }
   }, [allArticles]);
 
+  // Load available tags on mount
+  useEffect(() => {
+    const loadTags = async () => {
+      try {
+        // Make a dummy search to get available tags
+        const response = await fetch('/api/search?q=');
+        if (response.ok) {
+          const data: SearchResponse = await response.json();
+          if (data.availableTags) {
+            setAvailableTags(data.availableTags);
+          }
+        }
+      } catch (err) {
+        console.error('Failed to load tags:', err);
+      }
+    };
+    loadTags();
+  }, []);
+
   // Debounced search
   useEffect(() => {
     if (debounceTimerRef.current !== null) {
@@ -165,7 +201,7 @@ export default function ArticleSearch({ allArticles }: Props) {
     }
 
     debounceTimerRef.current = window.setTimeout(() => {
-      performSearch(query);
+      performSearch(query, selectedTags);
     }, 300);
 
     return () => {
@@ -173,13 +209,22 @@ export default function ArticleSearch({ allArticles }: Props) {
         clearTimeout(debounceTimerRef.current);
       }
     };
-  }, [query, performSearch]);
+  }, [query, selectedTags, performSearch]);
 
   const handleClearSearch = () => {
     setQuery('');
+    setSelectedTags([]);
     setSearchResults([]);
     setIsSearchActive(false);
     setError(null);
+  };
+
+  const handleTagToggle = (tag: string) => {
+    if (selectedTags.includes(tag)) {
+      setSelectedTags(selectedTags.filter((t) => t !== tag));
+    } else {
+      setSelectedTags([...selectedTags, tag]);
+    }
   };
 
   const displayedArticles = isSearchActive ? searchResults : allArticles;
@@ -193,7 +238,7 @@ export default function ArticleSearch({ allArticles }: Props) {
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search articles by keywords, tags, or topics..."
+            placeholder="Search articles by keywords or tags..."
             className="w-full px-4 py-3 pl-12 pr-10 text-gray-900 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-600 focus:border-transparent"
             aria-label="Search articles"
           />
@@ -217,7 +262,7 @@ export default function ArticleSearch({ allArticles }: Props) {
           </div>
 
           {/* Clear Button */}
-          {query && (
+          {(query || selectedTags.length > 0) && (
             <button
               onClick={handleClearSearch}
               className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors"
@@ -241,6 +286,38 @@ export default function ArticleSearch({ allArticles }: Props) {
           )}
         </div>
 
+        {/* Horizontal Tag Filter */}
+        {availableTags.length > 0 && (
+          <div className="mt-3">
+            <div className="text-xs font-semibold text-gray-500 uppercase mb-2">
+              Filter by tags
+            </div>
+            <div className="overflow-x-auto -mx-4 px-4">
+              <div className="flex gap-2 pb-2">
+                {availableTags.map((tag) => {
+                  const isSelected = selectedTags.includes(tag);
+                  return (
+                    <button
+                      key={tag}
+                      onClick={() => handleTagToggle(tag)}
+                      className={`
+                        flex-shrink-0 px-3 py-1.5 text-sm font-medium rounded-full transition-colors
+                        ${isSelected
+                          ? 'bg-primary-600 text-white hover:bg-primary-700'
+                          : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                        }
+                      `}
+                      aria-label={`${isSelected ? 'Remove' : 'Add'} ${tag} filter`}
+                    >
+                      {tag}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        )}
+
         {/* Search Status */}
         {isSearchActive && (
           <div className="mt-3 text-sm text-gray-600">
@@ -254,7 +331,11 @@ export default function ArticleSearch({ allArticles }: Props) {
             ) : (
               <span>
                 Found {searchResults.length} article
-                {searchResults.length !== 1 ? 's' : ''} matching &quot;{query}&quot;
+                {searchResults.length !== 1 ? 's' : ''}
+                {query && ` matching "${query}"`}
+                {selectedTags.length > 0 && (
+                  <> with tag{selectedTags.length !== 1 ? 's' : ''}: {selectedTags.join(', ')}</>
+                )}
               </span>
             )}
           </div>
