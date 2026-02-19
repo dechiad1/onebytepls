@@ -13,7 +13,16 @@
       "api-design-best-practices",
       "cassandra-eventual-consistency"
     ],
+    "authentication": [
+      "api-design-best-practices"
+    ],
+    "sorting": [
+      "api-design-best-practices"
+    ],
     "provide": [
+      "api-design-best-practices"
+    ],
+    "codes": [
       "api-design-best-practices"
     ],
     "design": [
@@ -23,16 +32,7 @@
     "pagination": [
       "api-design-best-practices"
     ],
-    "codes": [
-      "api-design-best-practices"
-    ],
     "error": [
-      "api-design-best-practices"
-    ],
-    "sorting": [
-      "api-design-best-practices"
-    ],
-    "authentication": [
       "api-design-best-practices"
     ],
     "filtering": [
@@ -44,59 +44,487 @@
     "response": [
       "api-design-best-practices"
     ],
-    "methods": [
-      "api-design-best-practices"
-    ],
-    "token": [
-      "api-design-best-practices"
-    ],
-    "gracefully": [
-      "api-design-best-practices"
-    ],
-    "responses": [
-      "api-design-best-practices"
-    ],
-    "include": [
-      "api-design-best-practices"
-    ],
-    "examples": [
-      "api-design-best-practices"
-    ],
-    "nesting": [
-      "api-design-best-practices"
-    ],
-    "apis": [
-      "api-design-best-practices"
-    ],
-    "user": [
-      "api-design-best-practices"
-    ],
-    "searching": [
+    "document": [
       "api-design-best-practices"
     ],
     "return": [
       "api-design-best-practices"
     ],
-    "document": [
+    "gracefully": [
+      "api-design-best-practices"
+    ],
+    "apis": [
       "api-design-best-practices"
     ],
     "http": [
       "api-design-best-practices"
     ],
-    "intuitive": [
+    "methods": [
       "api-design-best-practices"
     ],
-    "work": [
+    "searching": [
       "api-design-best-practices"
     ],
-    "edge": [
+    "include": [
+      "api-design-best-practices"
+    ],
+    "user": [
+      "api-design-best-practices"
+    ],
+    "responses": [
+      "api-design-best-practices"
+    ],
+    "nesting": [
+      "api-design-best-practices"
+    ],
+    "examples": [
+      "api-design-best-practices"
+    ],
+    "token": [
       "api-design-best-practices"
     ],
     "designed": [
       "api-design-best-practices"
     ],
+    "intuitive": [
+      "api-design-best-practices"
+    ],
     "handles": [
       "api-design-best-practices"
+    ],
+    "work": [
+      "api-design-best-practices",
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "edge": [
+      "api-design-best-practices"
+    ],
+    "claude code": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "ai workflow": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "issue": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "agent": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "session": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "issues": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "context": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "review": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "claude": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "implementation": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "domain": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "time": [
+      "copilot-to-coworker-agent-driven-development",
+      "cassandra-eventual-consistency",
+      "enterprise-trust-vs-process"
+    ],
+    "feature": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "layer": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "tracker": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "runs": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "better": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "criteria": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "sessions": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "project": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "write": [
+      "copilot-to-coworker-agent-driven-development",
+      "cassandra-eventual-consistency"
+    ],
+    "architecture": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "skill": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "patterns": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "conventions": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "full": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "acceptance": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "workflow": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "features": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "next": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "start": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "need": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "writing": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "plan": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "prompt": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "gets": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "spec": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "over": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "change": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "reference": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "skills": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "spend": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "file": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "pipeline": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "right": [
+      "copilot-to-coworker-agent-driven-development",
+      "cassandra-eventual-consistency"
+    ],
+    "instead": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "agents": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "files": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "want": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "processes": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "coding": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "standards": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "running": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "install": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "driven": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "tasks": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "something": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "single": [
+      "copilot-to-coworker-agent-driven-development",
+      "cassandra-eventual-consistency"
+    ],
+    "line": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "stage": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "three": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "documents": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "works": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "fresh": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "reads": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "describing": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "problem": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "months": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "clean": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "tools": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "does": [
+      "copilot-to-coworker-agent-driven-development",
+      "cassandra-eventual-consistency"
+    ],
+    "structure": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "changes": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "development": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "quality": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "software": [
+      "copilot-to-coworker-agent-driven-development",
+      "enterprise-trust-vs-process"
+    ],
+    "package": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "read": [
+      "copilot-to-coworker-agent-driven-development",
+      "cassandra-eventual-consistency"
+    ],
+    "markdown": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "tests": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "everything": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "takes": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "large": [
+      "copilot-to-coworker-agent-driven-development",
+      "cassandra-eventual-consistency"
+    ],
+    "scoped": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "itself": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "someone": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "wrong": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "against": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "mistakes": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "thing": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "keep": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "data": [
+      "copilot-to-coworker-agent-driven-development",
+      "cassandra-eventual-consistency"
+    ],
+    "loop": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "chain": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "focused": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "produce": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "planning": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "stages": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "doesn": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "myself": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "progress": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "professional": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "goal": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "built": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "scope": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "environment": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "needs": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "checks": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "interact": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "making": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "language": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "team": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "simple": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "test": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "focus": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "vocabulary": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "service": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "model": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "notice": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "produces": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "create": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "results": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "know": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "engineering": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "across": [
+      "copilot-to-coworker-agent-driven-development",
+      "cassandra-eventual-consistency"
+    ],
+    "point": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "every": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "system": [
+      "copilot-to-coworker-agent-driven-development",
+      "cassandra-eventual-consistency"
+    ],
+    "isolation": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "implemented": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "things": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "find": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "business": [
+      "copilot-to-coworker-agent-driven-development",
+      "enterprise-trust-vs-process"
+    ],
+    "perform": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "done": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "real": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "less": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "writes": [
+      "copilot-to-coworker-agent-driven-development"
     ],
     "distributed systems": [
       "cassandra-eventual-consistency"
@@ -105,12 +533,6 @@
       "cassandra-eventual-consistency"
     ],
     "cassandra": [
-      "cassandra-eventual-consistency"
-    ],
-    "data": [
-      "cassandra-eventual-consistency"
-    ],
-    "write": [
       "cassandra-eventual-consistency"
     ],
     "level": [
@@ -140,135 +562,110 @@
     "record": [
       "cassandra-eventual-consistency"
     ],
-    "read": [
+    "value": [
       "cassandra-eventual-consistency"
     ],
     "lets": [
       "cassandra-eventual-consistency"
     ],
-    "value": [
-      "cassandra-eventual-consistency"
-    ],
     "hash": [
-      "cassandra-eventual-consistency"
-    ],
-    "client": [
-      "cassandra-eventual-consistency"
-    ],
-    "request": [
       "cassandra-eventual-consistency"
     ],
     "memory": [
       "cassandra-eventual-consistency"
     ],
+    "request": [
+      "cassandra-eventual-consistency"
+    ],
+    "client": [
+      "cassandra-eventual-consistency"
+    ],
     "disk": [
       "cassandra-eventual-consistency"
     ],
-    "high": [
+    "factor": [
       "cassandra-eventual-consistency"
     ],
-    "successful": [
-      "cassandra-eventual-consistency"
-    ],
-    "setting": [
+    "many": [
       "cassandra-eventual-consistency"
     ],
     "replication": [
-      "cassandra-eventual-consistency"
-    ],
-    "single": [
-      "cassandra-eventual-consistency"
-    ],
-    "factor": [
       "cassandra-eventual-consistency"
     ],
     "latency": [
       "cassandra-eventual-consistency",
       "enterprise-trust-vs-process"
     ],
-    "many": [
+    "high": [
       "cassandra-eventual-consistency"
     ],
     "block": [
       "cassandra-eventual-consistency"
     ],
-    "quorum": [
+    "setting": [
       "cassandra-eventual-consistency"
     ],
-    "concept": [
-      "cassandra-eventual-consistency"
-    ],
-    "flush": [
-      "cassandra-eventual-consistency"
-    ],
-    "impact": [
-      "cassandra-eventual-consistency"
-    ],
-    "system": [
-      "cassandra-eventual-consistency"
-    ],
-    "stores": [
-      "cassandra-eventual-consistency"
-    ],
-    "tells": [
+    "successful": [
       "cassandra-eventual-consistency"
     ],
     "must": [
       "cassandra-eventual-consistency",
       "enterprise-trust-vs-process"
     ],
-    "allows": [
+    "impact": [
       "cassandra-eventual-consistency"
     ],
     "tradeoffs": [
-      "cassandra-eventual-consistency"
-    ],
-    "performing": [
-      "cassandra-eventual-consistency"
-    ],
-    "keys": [
-      "cassandra-eventual-consistency"
-    ],
-    "process": [
-      "cassandra-eventual-consistency",
-      "enterprise-trust-vs-process"
-    ],
-    "records": [
-      "cassandra-eventual-consistency"
-    ],
-    "large": [
       "cassandra-eventual-consistency"
     ],
     "require": [
       "cassandra-eventual-consistency",
       "enterprise-trust-vs-process"
     ],
-    "right": [
+    "records": [
       "cassandra-eventual-consistency"
-    ],
-    "production": [
-      "cassandra-eventual-consistency"
-    ],
-    "time": [
-      "cassandra-eventual-consistency",
-      "enterprise-trust-vs-process"
     ],
     "stored": [
+      "cassandra-eventual-consistency"
+    ],
+    "quorum": [
       "cassandra-eventual-consistency"
     ],
     "database": [
       "cassandra-eventual-consistency"
     ],
+    "flush": [
+      "cassandra-eventual-consistency"
+    ],
+    "concept": [
+      "cassandra-eventual-consistency"
+    ],
     "responsible": [
       "cassandra-eventual-consistency"
     ],
+    "tells": [
+      "cassandra-eventual-consistency"
+    ],
+    "keys": [
+      "cassandra-eventual-consistency"
+    ],
+    "production": [
+      "cassandra-eventual-consistency"
+    ],
+    "performing": [
+      "cassandra-eventual-consistency"
+    ],
+    "stores": [
+      "cassandra-eventual-consistency"
+    ],
+    "process": [
+      "cassandra-eventual-consistency",
+      "enterprise-trust-vs-process"
+    ],
+    "allows": [
+      "cassandra-eventual-consistency"
+    ],
     "occurs": [
-      "cassandra-eventual-consistency"
-    ],
-    "does": [
-      "cassandra-eventual-consistency"
-    ],
-    "across": [
       "cassandra-eventual-consistency"
     ],
     "enterprise": [
@@ -277,16 +674,16 @@
     "teams": [
       "enterprise-trust-vs-process"
     ],
-    "accountability": [
-      "enterprise-trust-vs-process"
-    ],
     "risk": [
       "enterprise-trust-vs-process"
     ],
-    "trust": [
+    "accountability": [
       "enterprise-trust-vs-process"
     ],
     "because": [
+      "enterprise-trust-vs-process"
+    ],
+    "trust": [
       "enterprise-trust-vs-process"
     ],
     "recovery": [
@@ -295,22 +692,16 @@
     "decisions": [
       "enterprise-trust-vs-process"
     ],
-    "software": [
-      "enterprise-trust-vs-process"
-    ],
     "decision": [
-      "enterprise-trust-vs-process"
-    ],
-    "incentives": [
       "enterprise-trust-vs-process"
     ],
     "expertise": [
       "enterprise-trust-vs-process"
     ],
-    "disaster": [
+    "incentives": [
       "enterprise-trust-vs-process"
     ],
-    "systems": [
+    "disaster": [
       "enterprise-trust-vs-process"
     ],
     "rather": [
@@ -319,22 +710,25 @@
     "explicit": [
       "enterprise-trust-vs-process"
     ],
-    "cost": [
-      "enterprise-trust-vs-process"
-    ],
-    "failures": [
-      "enterprise-trust-vs-process"
-    ],
-    "central": [
+    "systems": [
       "enterprise-trust-vs-process"
     ],
     "trade": [
       "enterprise-trust-vs-process"
     ],
-    "role": [
+    "central": [
       "enterprise-trust-vs-process"
     ],
-    "align": [
+    "offs": [
+      "enterprise-trust-vs-process"
+    ],
+    "deep": [
+      "enterprise-trust-vs-process"
+    ],
+    "mistrust": [
+      "enterprise-trust-vs-process"
+    ],
+    "mirror": [
       "enterprise-trust-vs-process"
     ],
     "governance": [
@@ -343,67 +737,106 @@
     "organization": [
       "enterprise-trust-vs-process"
     ],
-    "deep": [
+    "failures": [
       "enterprise-trust-vs-process"
     ],
-    "mirror": [
-      "enterprise-trust-vs-process"
-    ],
-    "business": [
-      "enterprise-trust-vs-process"
-    ],
-    "mistrust": [
-      "enterprise-trust-vs-process"
-    ],
-    "offs": [
+    "align": [
       "enterprise-trust-vs-process"
     ],
     "outcomes": [
       "enterprise-trust-vs-process"
+    ],
+    "role": [
+      "enterprise-trust-vs-process"
+    ],
+    "cost": [
+      "enterprise-trust-vs-process"
     ]
   },
   "keywords": [
+    "acceptance",
     "accountability",
     "across",
+    "against",
+    "agent",
+    "agents",
+    "ai workflow",
     "align",
     "allows",
     "api",
     "apis",
+    "architecture",
     "authentication",
     "because",
+    "better",
     "block",
+    "built",
     "business",
     "cassandra",
     "central",
+    "chain",
+    "change",
+    "changes",
+    "checks",
+    "claude",
+    "claude code",
+    "clean",
     "client",
     "cluster",
     "codes",
+    "coding",
     "concept",
     "consistency",
     "consistent",
+    "context",
+    "conventions",
     "cost",
+    "create",
+    "criteria",
     "data",
     "database",
     "decision",
     "decisions",
     "deep",
+    "describing",
     "design",
     "designed",
+    "development",
     "disaster",
     "disk",
     "distributed systems",
     "document",
+    "documents",
     "does",
+    "doesn",
+    "domain",
+    "done",
+    "driven",
     "edge",
+    "engineering",
     "enterprise",
+    "environment",
     "error",
+    "every",
+    "everything",
     "examples",
     "expertise",
     "explicit",
     "factor",
     "failures",
+    "feature",
+    "features",
+    "file",
+    "files",
     "filtering",
+    "find",
     "flush",
+    "focus",
+    "focused",
+    "fresh",
+    "full",
+    "gets",
+    "goal",
     "governance",
     "gracefully",
     "handles",
@@ -411,39 +844,85 @@
     "high",
     "http",
     "impact",
+    "implementation",
+    "implemented",
     "incentives",
     "include",
+    "install",
+    "instead",
+    "interact",
     "intuitive",
+    "isolation",
+    "issue",
+    "issues",
+    "itself",
+    "keep",
     "keys",
+    "know",
+    "language",
     "large",
     "latency",
+    "layer",
+    "less",
     "lets",
     "level",
+    "line",
+    "loop",
+    "making",
     "many",
+    "markdown",
     "memory",
     "methods",
     "mirror",
+    "mistakes",
     "mistrust",
+    "model",
+    "months",
     "must",
+    "myself",
+    "need",
+    "needs",
     "nesting",
+    "next",
     "node",
     "nodes",
+    "notice",
     "occurs",
     "offs",
     "organization",
     "outcomes",
+    "over",
+    "package",
     "pagination",
     "partition",
+    "patterns",
+    "perform",
     "performing",
+    "pipeline",
+    "plan",
+    "planning",
+    "point",
+    "problem",
     "process",
+    "processes",
+    "produce",
+    "produces",
     "production",
+    "professional",
+    "progress",
+    "project",
+    "prompt",
     "provide",
+    "quality",
     "quorum",
     "rather",
     "read",
+    "reads",
+    "real",
     "record",
     "records",
     "recovery",
+    "reference",
     "repair",
     "replica",
     "replication",
@@ -454,33 +933,71 @@
     "responses",
     "responsible",
     "rest",
+    "results",
     "return",
+    "review",
     "right",
     "risk",
     "role",
+    "running",
+    "runs",
+    "scope",
+    "scoped",
     "searching",
+    "service",
+    "session",
+    "sessions",
     "setting",
+    "simple",
     "single",
+    "skill",
+    "skills",
     "software",
+    "someone",
+    "something",
     "sorting",
+    "spec",
+    "spend",
+    "stage",
+    "stages",
+    "standards",
+    "start",
     "status",
     "storage",
     "stored",
     "stores",
+    "structure",
     "successful",
     "system",
     "systems",
+    "takes",
+    "tasks",
+    "team",
     "teams",
     "tells",
+    "test",
+    "tests",
+    "thing",
+    "things",
+    "three",
     "time",
     "token",
+    "tools",
+    "tracker",
     "trade",
     "tradeoffs",
     "trust",
     "user",
     "value",
+    "vocabulary",
+    "want",
     "work",
-    "write"
+    "workflow",
+    "works",
+    "write",
+    "writes",
+    "writing",
+    "wrong"
   ],
   "tagIndex": {
     "api": [
@@ -488,6 +1005,12 @@
     ],
     "rest": [
       "api-design-best-practices"
+    ],
+    "claude code": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "ai workflow": [
+      "copilot-to-coworker-agent-driven-development"
     ],
     "distributed systems": [
       "cassandra-eventual-consistency"
@@ -509,6 +1032,15 @@
       ],
       "date": "2022-08-10"
     },
+    "copilot-to-coworker-agent-driven-development": {
+      "title": "From Copilot to Coworker",
+      "description": "A Practical Guide to Agent-Driven Development",
+      "tags": [
+        "claude code",
+        "AI workflow"
+      ],
+      "date": "2026-02-19"
+    },
     "cassandra-eventual-consistency": {
       "title": "Cassandra: the use case for eventual consistency",
       "description": "When should one use an always available, network partitioned database for critical data?",
@@ -528,16 +1060,18 @@
     }
   },
   "tags": [
+    "ai workflow",
     "api",
+    "claude code",
     "distributed systems",
     "enterprise",
     "rest",
     "storage"
   ],
   "metadata": {
-    "total_articles": 3,
-    "total_keywords": 118,
-    "total_tags": 5,
+    "total_articles": 4,
+    "total_keywords": 244,
+    "total_tags": 7,
     "generated_at": "BUILD_TIME"
   }
 }

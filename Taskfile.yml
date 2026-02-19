@@ -20,6 +20,9 @@ tasks:
 
   create:
     desc: Create a new article folder in src/content/articles
+    preconditions:
+      - sh: test -n "{{.CLI_ARGS}}"
+        msg: "Usage: task create -- <article-name>"
     cmds:
       - mkdir -p src/content/articles/{{.CLI_ARGS}}
       - |
@@ -48,8 +51,6 @@ tasks:
         Wrap up your thoughts...
         EOF
       - echo "Created article at src/content/articles/{{.CLI_ARGS}}/index.md"
-    requires:
-      vars: [CLI_ARGS]
 
   scripts:setup:
     desc: Setup Python virtual environment and install dependencies
