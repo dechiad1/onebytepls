@@ -6,7 +6,7 @@ tags:
   - enterprise
 ---
 
-Enterprise software failures have a unique quality: they linger. Multi-million-dollar programs [limp along for years](https://www.it-cisq.org/cisq-files/pdf/CPSQ-2020-report.pdf), [producing underwhelming results](https://www.mckinsey.com/~/media/McKinsey/dotcom/client_service/Corporate%20Finance/MoF/PDF%20issues/PDFs%20Issue%2045/Final/MoF45_LargeScaleIT.ashx) that require constant justification while teams quietly absorb the drag. There are always exceptions. Certain projects operate outside the process monolith as executives fight for value faster believing the only way to innovate is to drop all process and start anew. 
+Enterprise software failures have a unique quality: they linger. Multi-million-dollar programs [limp along for years](https://www.it-cisq.org/the-cost-of-poor-software-quality-in-the-us-a-2020-report/), [producing underwhelming results](https://www.mckinsey.com/~/media/McKinsey/dotcom/client_service/Corporate%20Finance/MoF/PDF%20issues/PDFs%20Issue%2045/Final/MoF45_LargeScaleIT.ashx) that require constant justification while teams quietly absorb the drag. There are always exceptions. Certain projects operate outside the process monolith as executives fight for value faster believing the only way to innovate is to drop all process and start anew. 
 
 That belief is comforting. And wrong.
 

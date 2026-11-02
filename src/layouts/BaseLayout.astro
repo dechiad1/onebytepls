@@ -11,12 +11,13 @@ interface Props {
 }
 
 const {
-  title = site.name,
+  title,
   description = site.description,
   image = site.coverImage,
 } = Astro.props;
 
-const pageTitle = title === site.name ? title : `${title} | ${site.name}`;
+// Pages without a title (the home page) get the site tagline so the title is descriptive
+const pageTitle = title ? `${title} | ${site.name}` : `${site.name} | ${site.title}`;
 const canonicalUrl = new URL(Astro.url.pathname, site.url);
 ---
 
@@ -50,7 +51,6 @@ const canonicalUrl = new URL(Astro.url.pathname, site.url);
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
     <!-- Preconnect to external resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
