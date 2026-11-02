@@ -398,6 +398,19 @@ export default {
     }
 
     // Route: All other requests -> serve static assets
-    return env.ASSETS.fetch(request);
+    const assetResponse = await env.ASSETS.fetch(request);
+    if (assetResponse.status !== 404) {
+      return assetResponse;
+    }
+
+    // Unknown path: serve the custom 404 page with a real 404 status
+    const notFoundPage = await env.ASSETS.fetch(new URL('/404', request.url));
+    if (!notFoundPage.ok) {
+      return new Response('Not Found', { status: 404 });
+    }
+    return new Response(notFoundPage.body, {
+      status: 404,
+      headers: notFoundPage.headers,
+    });
   },
 };

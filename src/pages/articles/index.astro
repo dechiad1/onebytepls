@@ -1,7 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import ArticleCard from '../../components/ArticleCard.astro';
 import ArticleSearch from '../../components/ArticleSearch';
 import { site } from '../../../config/site';
 
@@ -39,31 +38,11 @@ const sortedArticles = allArticles
 
       {
         sortedArticles.length > 0 ? (
-          <>
-            {/* Static fallback for users without JavaScript */}
-            <noscript>
-              <div class="divide-y divide-gray-200">
-                {sortedArticles.map((article) => (
-                  <ArticleCard
-                    slug={article.slug}
-                    title={article.title}
-                    description={article.description}
-                    date={new Date(article.date)}
-                    tags={article.tags}
-                    readingTime={article.readingTime}
-                  />
-                ))}
-              </div>
-            </noscript>
-
-            {/* Interactive search with article listing for JS-enabled browsers */}
-            <div class="js-only">
-              <ArticleSearch
-                client:load
-                allArticles={sortedArticles}
-              />
-            </div>
-          </>
+          /* ArticleSearch is server-rendered with the full list, so it also works without JavaScript */
+          <ArticleSearch
+            client:load
+            allArticles={sortedArticles}
+          />
         ) : (
           <div class="text-center py-16">
             <p class="text-gray-600 text-lg">No articles yet. Check back soon!</p>
@@ -73,24 +52,3 @@ const sortedArticles = allArticles
     </div>
   </section>
 </BaseLayout>
-
-<style>
-  /* Hide JS-only content when JavaScript is disabled */
-  .js-only {
-    display: block;
-  }
-
-  noscript + .js-only {
-    display: block;
-  }
-</style>
-
-<script>
-  // Show JS-only content and hide noscript content
-  document.addEventListener('DOMContentLoaded', () => {
-    const noscriptElements = document.querySelectorAll('noscript');
-    noscriptElements.forEach((el) => {
-      el.remove();
-    });
-  });
-</script>

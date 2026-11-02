@@ -28,7 +28,7 @@ function ArticleCardClient({ article }: { article: Article }) {
   return (
     <article className="py-6 border-b border-gray-200 last:border-b-0">
       <a
-        href={`/articles/${article.slug}`}
+        href={`/articles/${article.slug}/`}
         className="group block cursor-pointer"
       >
         <h2 className="text-xl font-semibold text-gray-900 group-hover:text-primary-600 transition-colors mb-2">

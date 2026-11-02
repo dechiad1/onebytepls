@@ -24,8 +24,8 @@ export const site = {
   },
 
   navigation: [
-    { label: 'Articles', href: '/articles' },
-    { label: 'About', href: '/about' },
+    { label: 'Articles', href: '/articles/' },
+    { label: 'About', href: '/about/' },
   ],
 
   // Number of recent articles to show on the home page
