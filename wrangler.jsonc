@@ -24,10 +24,6 @@
 			"pattern": "onebytepls.com",
 			"zone_name": "onebytepls.com",
 			"custom_domain": true
-		},
-		{
-			"pattern": "www.onebytepls.com",
-			"zone_name": "onebytepls.com",
 		}
 	]
 }
