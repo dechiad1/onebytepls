@@ -102,6 +102,12 @@ body {
   font-size: 0.875em;
 }
 
+/* Typography plugin wraps inline code in literal backticks; the pill background is enough */
+.prose code:not(pre code)::before,
+.prose code:not(pre code)::after {
+  content: none;
+}
+
 .prose pre {
   border-radius: 0.5rem;
   margin: 1.5rem 0;

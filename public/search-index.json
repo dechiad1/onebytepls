@@ -13,74 +13,75 @@
       "api-design-best-practices",
       "cassandra-eventual-consistency"
     ],
+    "design": [
+      "api-design-best-practices",
+      "enterprise-trust-vs-process"
+    ],
     "sorting": [
-      "api-design-best-practices"
-    ],
-    "pagination": [
-      "api-design-best-practices"
-    ],
-    "status": [
-      "api-design-best-practices"
-    ],
-    "error": [
-      "api-design-best-practices"
-    ],
-    "provide": [
-      "api-design-best-practices"
-    ],
-    "response": [
-      "api-design-best-practices"
-    ],
-    "codes": [
       "api-design-best-practices"
     ],
     "authentication": [
       "api-design-best-practices"
     ],
-    "design": [
-      "api-design-best-practices",
-      "enterprise-trust-vs-process"
-    ],
     "filtering": [
       "api-design-best-practices"
     ],
-    "return": [
+    "provide": [
       "api-design-best-practices"
     ],
-    "token": [
+    "pagination": [
       "api-design-best-practices"
     ],
-    "apis": [
+    "codes": [
+      "api-design-best-practices"
+    ],
+    "error": [
+      "api-design-best-practices"
+    ],
+    "response": [
+      "api-design-best-practices"
+    ],
+    "status": [
       "api-design-best-practices"
     ],
     "examples": [
       "api-design-best-practices"
     ],
-    "nesting": [
-      "api-design-best-practices"
-    ],
-    "include": [
-      "api-design-best-practices"
-    ],
-    "gracefully": [
-      "api-design-best-practices"
-    ],
-    "responses": [
-      "api-design-best-practices"
-    ],
-    "methods": [
-      "api-design-best-practices"
-    ],
-    "user": [
-      "api-design-best-practices"
-    ],
     "document": [
+      "api-design-best-practices"
+    ],
+    "apis": [
       "api-design-best-practices"
     ],
     "http": [
       "api-design-best-practices"
     ],
+    "return": [
+      "api-design-best-practices"
+    ],
+    "nesting": [
+      "api-design-best-practices"
+    ],
+    "methods": [
+      "api-design-best-practices"
+    ],
+    "include": [
+      "api-design-best-practices"
+    ],
     "searching": [
+      "api-design-best-practices"
+    ],
+    "user": [
+      "api-design-best-practices"
+    ],
+    "gracefully": [
+      "api-design-best-practices"
+    ],
+    "token": [
+      "api-design-best-practices",
+      "cloudflare-workers-ai-free-tier"
+    ],
+    "responses": [
       "api-design-best-practices"
     ],
     "work": [
@@ -90,10 +91,10 @@
     "edge": [
       "api-design-best-practices"
     ],
-    "designed": [
+    "handles": [
       "api-design-best-practices"
     ],
-    "handles": [
+    "designed": [
       "api-design-best-practices"
     ],
     "intuitive": [
@@ -103,7 +104,8 @@
       "copilot-to-coworker-agent-driven-development"
     ],
     "ai workflow": [
-      "copilot-to-coworker-agent-driven-development"
+      "copilot-to-coworker-agent-driven-development",
+      "cloudflare-workers-ai-free-tier"
     ],
     "issue": [
       "copilot-to-coworker-agent-driven-development"
@@ -129,13 +131,14 @@
     "implementation": [
       "copilot-to-coworker-agent-driven-development"
     ],
-    "domain": [
-      "copilot-to-coworker-agent-driven-development"
-    ],
     "time": [
       "copilot-to-coworker-agent-driven-development",
       "cassandra-eventual-consistency",
+      "cloudflare-workers-ai-free-tier",
       "enterprise-trust-vs-process"
+    ],
+    "domain": [
+      "copilot-to-coworker-agent-driven-development"
     ],
     "feature": [
       "copilot-to-coworker-agent-driven-development"
@@ -146,13 +149,14 @@
     "layer": [
       "copilot-to-coworker-agent-driven-development"
     ],
-    "architecture": [
-      "copilot-to-coworker-agent-driven-development"
-    ],
-    "runs": [
+    "criteria": [
       "copilot-to-coworker-agent-driven-development"
     ],
     "project": [
+      "copilot-to-coworker-agent-driven-development",
+      "cloudflare-workers-ai-free-tier"
+    ],
+    "runs": [
       "copilot-to-coworker-agent-driven-development"
     ],
     "write": [
@@ -162,25 +166,22 @@
     "sessions": [
       "copilot-to-coworker-agent-driven-development"
     ],
-    "criteria": [
+    "architecture": [
       "copilot-to-coworker-agent-driven-development"
     ],
     "better": [
       "copilot-to-coworker-agent-driven-development"
     ],
-    "conventions": [
-      "copilot-to-coworker-agent-driven-development"
-    ],
-    "workflow": [
-      "copilot-to-coworker-agent-driven-development"
-    ],
     "features": [
       "copilot-to-coworker-agent-driven-development"
     ],
-    "skill": [
+    "conventions": [
       "copilot-to-coworker-agent-driven-development"
     ],
     "patterns": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "skill": [
       "copilot-to-coworker-agent-driven-development"
     ],
     "acceptance": [
@@ -189,74 +190,67 @@
     "full": [
       "copilot-to-coworker-agent-driven-development"
     ],
-    "reference": [
+    "workflow": [
       "copilot-to-coworker-agent-driven-development"
     ],
-    "prompt": [
-      "copilot-to-coworker-agent-driven-development"
-    ],
-    "pipeline": [
-      "copilot-to-coworker-agent-driven-development"
-    ],
-    "spend": [
-      "copilot-to-coworker-agent-driven-development"
-    ],
-    "writing": [
-      "copilot-to-coworker-agent-driven-development"
-    ],
-    "start": [
-      "copilot-to-coworker-agent-driven-development"
-    ],
-    "need": [
-      "copilot-to-coworker-agent-driven-development"
-    ],
-    "over": [
-      "copilot-to-coworker-agent-driven-development"
-    ],
-    "skills": [
+    "change": [
       "copilot-to-coworker-agent-driven-development"
     ],
     "right": [
       "copilot-to-coworker-agent-driven-development",
       "cassandra-eventual-consistency"
     ],
-    "file": [
+    "plan": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "over": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "reference": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "spend": [
+      "copilot-to-coworker-agent-driven-development",
+      "cloudflare-workers-ai-free-tier"
+    ],
+    "gets": [
       "copilot-to-coworker-agent-driven-development"
     ],
     "spec": [
       "copilot-to-coworker-agent-driven-development"
     ],
-    "gets": [
-      "copilot-to-coworker-agent-driven-development"
-    ],
-    "plan": [
-      "copilot-to-coworker-agent-driven-development"
-    ],
-    "change": [
-      "copilot-to-coworker-agent-driven-development"
-    ],
     "next": [
       "copilot-to-coworker-agent-driven-development"
     ],
-    "running": [
+    "prompt": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "start": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "writing": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "pipeline": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "need": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "skills": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "file": [
       "copilot-to-coworker-agent-driven-development"
     ],
     "want": [
       "copilot-to-coworker-agent-driven-development"
     ],
-    "standards": [
-      "copilot-to-coworker-agent-driven-development"
-    ],
-    "files": [
-      "copilot-to-coworker-agent-driven-development"
-    ],
-    "coding": [
-      "copilot-to-coworker-agent-driven-development"
+    "running": [
+      "copilot-to-coworker-agent-driven-development",
+      "cloudflare-workers-ai-free-tier"
     ],
     "install": [
-      "copilot-to-coworker-agent-driven-development"
-    ],
-    "instead": [
       "copilot-to-coworker-agent-driven-development"
     ],
     "agents": [
@@ -265,266 +259,281 @@
     "processes": [
       "copilot-to-coworker-agent-driven-development"
     ],
-    "changes": [
+    "coding": [
       "copilot-to-coworker-agent-driven-development"
     ],
-    "problem": [
+    "files": [
       "copilot-to-coworker-agent-driven-development"
     ],
-    "works": [
+    "instead": [
       "copilot-to-coworker-agent-driven-development"
     ],
-    "single": [
-      "copilot-to-coworker-agent-driven-development",
-      "cassandra-eventual-consistency"
+    "standards": [
+      "copilot-to-coworker-agent-driven-development"
     ],
-    "clean": [
+    "line": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "driven": [
       "copilot-to-coworker-agent-driven-development"
     ],
     "tasks": [
       "copilot-to-coworker-agent-driven-development"
     ],
-    "takes": [
-      "copilot-to-coworker-agent-driven-development"
-    ],
-    "does": [
-      "copilot-to-coworker-agent-driven-development",
-      "cassandra-eventual-consistency"
-    ],
-    "everything": [
-      "copilot-to-coworker-agent-driven-development"
-    ],
     "something": [
       "copilot-to-coworker-agent-driven-development"
     ],
-    "reads": [
+    "quality": [
       "copilot-to-coworker-agent-driven-development"
     ],
     "software": [
       "copilot-to-coworker-agent-driven-development",
       "enterprise-trust-vs-process"
     ],
-    "development": [
-      "copilot-to-coworker-agent-driven-development"
-    ],
-    "tests": [
-      "copilot-to-coworker-agent-driven-development"
-    ],
-    "quality": [
-      "copilot-to-coworker-agent-driven-development"
-    ],
-    "three": [
-      "copilot-to-coworker-agent-driven-development"
-    ],
-    "documents": [
-      "copilot-to-coworker-agent-driven-development"
-    ],
-    "structure": [
-      "copilot-to-coworker-agent-driven-development"
-    ],
     "stage": [
-      "copilot-to-coworker-agent-driven-development"
-    ],
-    "months": [
-      "copilot-to-coworker-agent-driven-development"
-    ],
-    "describing": [
-      "copilot-to-coworker-agent-driven-development"
-    ],
-    "tools": [
       "copilot-to-coworker-agent-driven-development"
     ],
     "fresh": [
       "copilot-to-coworker-agent-driven-development"
     ],
-    "markdown": [
+    "tools": [
       "copilot-to-coworker-agent-driven-development"
     ],
-    "driven": [
+    "everything": [
       "copilot-to-coworker-agent-driven-development"
     ],
     "read": [
       "copilot-to-coworker-agent-driven-development",
       "cassandra-eventual-consistency"
     ],
-    "line": [
+    "works": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "problem": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "documents": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "three": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "markdown": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "months": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "does": [
+      "copilot-to-coworker-agent-driven-development",
+      "cassandra-eventual-consistency"
+    ],
+    "clean": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "tests": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "changes": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "single": [
+      "copilot-to-coworker-agent-driven-development",
+      "cassandra-eventual-consistency"
+    ],
+    "development": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "structure": [
       "copilot-to-coworker-agent-driven-development"
     ],
     "package": [
       "copilot-to-coworker-agent-driven-development"
     ],
-    "results": [
+    "reads": [
       "copilot-to-coworker-agent-driven-development"
     ],
-    "professional": [
+    "takes": [
       "copilot-to-coworker-agent-driven-development"
     ],
-    "environment": [
-      "copilot-to-coworker-agent-driven-development"
-    ],
-    "making": [
-      "copilot-to-coworker-agent-driven-development"
-    ],
-    "scope": [
-      "copilot-to-coworker-agent-driven-development"
-    ],
-    "isolation": [
-      "copilot-to-coworker-agent-driven-development"
-    ],
-    "checks": [
-      "copilot-to-coworker-agent-driven-development"
-    ],
-    "vocabulary": [
-      "copilot-to-coworker-agent-driven-development"
-    ],
-    "language": [
-      "copilot-to-coworker-agent-driven-development"
-    ],
-    "itself": [
-      "copilot-to-coworker-agent-driven-development"
-    ],
-    "stages": [
-      "copilot-to-coworker-agent-driven-development"
-    ],
-    "planning": [
-      "copilot-to-coworker-agent-driven-development"
-    ],
-    "scoped": [
-      "copilot-to-coworker-agent-driven-development"
-    ],
-    "engineering": [
-      "copilot-to-coworker-agent-driven-development"
-    ],
-    "test": [
-      "copilot-to-coworker-agent-driven-development"
-    ],
-    "produce": [
-      "copilot-to-coworker-agent-driven-development"
-    ],
-    "data": [
-      "copilot-to-coworker-agent-driven-development",
-      "cassandra-eventual-consistency"
-    ],
-    "simple": [
-      "copilot-to-coworker-agent-driven-development"
-    ],
-    "perform": [
-      "copilot-to-coworker-agent-driven-development"
-    ],
-    "things": [
-      "copilot-to-coworker-agent-driven-development"
-    ],
-    "create": [
-      "copilot-to-coworker-agent-driven-development"
-    ],
-    "large": [
-      "copilot-to-coworker-agent-driven-development",
-      "cassandra-eventual-consistency"
-    ],
-    "produces": [
-      "copilot-to-coworker-agent-driven-development"
-    ],
-    "model": [
-      "copilot-to-coworker-agent-driven-development"
-    ],
-    "know": [
+    "describing": [
       "copilot-to-coworker-agent-driven-development"
     ],
     "across": [
       "copilot-to-coworker-agent-driven-development",
       "cassandra-eventual-consistency"
     ],
-    "done": [
+    "loop": [
       "copilot-to-coworker-agent-driven-development"
     ],
-    "service": [
-      "copilot-to-coworker-agent-driven-development"
-    ],
-    "implemented": [
-      "copilot-to-coworker-agent-driven-development"
-    ],
-    "system": [
-      "copilot-to-coworker-agent-driven-development",
-      "cassandra-eventual-consistency"
-    ],
-    "focus": [
-      "copilot-to-coworker-agent-driven-development"
-    ],
-    "real": [
-      "copilot-to-coworker-agent-driven-development"
-    ],
-    "every": [
-      "copilot-to-coworker-agent-driven-development"
-    ],
-    "progress": [
-      "copilot-to-coworker-agent-driven-development"
-    ],
-    "less": [
+    "test": [
       "copilot-to-coworker-agent-driven-development"
     ],
     "business": [
       "copilot-to-coworker-agent-driven-development",
       "enterprise-trust-vs-process"
     ],
-    "wrong": [
+    "progress": [
       "copilot-to-coworker-agent-driven-development"
     ],
-    "focused": [
+    "vocabulary": [
       "copilot-to-coworker-agent-driven-development"
     ],
-    "goal": [
+    "data": [
+      "copilot-to-coworker-agent-driven-development",
+      "cassandra-eventual-consistency",
+      "cloudflare-workers-ai-free-tier"
+    ],
+    "produces": [
       "copilot-to-coworker-agent-driven-development"
     ],
-    "notice": [
-      "copilot-to-coworker-agent-driven-development"
-    ],
-    "someone": [
-      "copilot-to-coworker-agent-driven-development"
-    ],
-    "against": [
-      "copilot-to-coworker-agent-driven-development"
-    ],
-    "chain": [
-      "copilot-to-coworker-agent-driven-development"
-    ],
-    "writes": [
+    "planning": [
       "copilot-to-coworker-agent-driven-development"
     ],
     "doesn": [
       "copilot-to-coworker-agent-driven-development"
     ],
-    "team": [
+    "focused": [
       "copilot-to-coworker-agent-driven-development"
     ],
-    "mistakes": [
+    "know": [
       "copilot-to-coworker-agent-driven-development"
     ],
-    "loop": [
+    "professional": [
       "copilot-to-coworker-agent-driven-development"
     ],
-    "interact": [
+    "writes": [
       "copilot-to-coworker-agent-driven-development"
     ],
-    "myself": [
+    "done": [
       "copilot-to-coworker-agent-driven-development"
     ],
-    "thing": [
+    "stages": [
       "copilot-to-coworker-agent-driven-development"
     ],
     "point": [
       "copilot-to-coworker-agent-driven-development"
     ],
-    "built": [
+    "things": [
       "copilot-to-coworker-agent-driven-development"
     ],
-    "keep": [
+    "mistakes": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "environment": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "checks": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "thing": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "perform": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "focus": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "results": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "implemented": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "real": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "engineering": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "needs": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "interact": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "create": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "goal": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "model": [
+      "copilot-to-coworker-agent-driven-development",
+      "cloudflare-workers-ai-free-tier"
+    ],
+    "myself": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "against": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "simple": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "produce": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "language": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "service": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "scope": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "someone": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "less": [
       "copilot-to-coworker-agent-driven-development"
     ],
     "find": [
       "copilot-to-coworker-agent-driven-development"
     ],
-    "needs": [
+    "built": [
       "copilot-to-coworker-agent-driven-development"
+    ],
+    "large": [
+      "copilot-to-coworker-agent-driven-development",
+      "cassandra-eventual-consistency"
+    ],
+    "making": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "notice": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "every": [
+      "copilot-to-coworker-agent-driven-development",
+      "cloudflare-workers-ai-free-tier"
+    ],
+    "isolation": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "chain": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "keep": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "team": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "itself": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "scoped": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "wrong": [
+      "copilot-to-coworker-agent-driven-development"
+    ],
+    "system": [
+      "copilot-to-coworker-agent-driven-development",
+      "cassandra-eventual-consistency"
     ],
     "distributed systems": [
       "cassandra-eventual-consistency"
@@ -550,10 +559,10 @@
     "cluster": [
       "cassandra-eventual-consistency"
     ],
-    "nodes": [
+    "replica": [
       "cassandra-eventual-consistency"
     ],
-    "replica": [
+    "nodes": [
       "cassandra-eventual-consistency"
     ],
     "repair": [
@@ -562,16 +571,10 @@
     "record": [
       "cassandra-eventual-consistency"
     ],
-    "lets": [
-      "cassandra-eventual-consistency"
-    ],
     "value": [
       "cassandra-eventual-consistency"
     ],
-    "memory": [
-      "cassandra-eventual-consistency"
-    ],
-    "request": [
+    "lets": [
       "cassandra-eventual-consistency"
     ],
     "client": [
@@ -583,35 +586,44 @@
     "disk": [
       "cassandra-eventual-consistency"
     ],
-    "successful": [
+    "memory": [
       "cassandra-eventual-consistency"
     ],
-    "latency": [
-      "cassandra-eventual-consistency",
-      "enterprise-trust-vs-process"
-    ],
-    "high": [
+    "request": [
       "cassandra-eventual-consistency"
     ],
     "setting": [
-      "cassandra-eventual-consistency"
+      "cassandra-eventual-consistency",
+      "cloudflare-workers-ai-free-tier"
     ],
-    "factor": [
-      "cassandra-eventual-consistency"
-    ],
-    "many": [
+    "block": [
       "cassandra-eventual-consistency"
     ],
     "replication": [
       "cassandra-eventual-consistency"
     ],
-    "block": [
+    "factor": [
       "cassandra-eventual-consistency"
+    ],
+    "high": [
+      "cassandra-eventual-consistency"
+    ],
+    "successful": [
+      "cassandra-eventual-consistency"
+    ],
+    "many": [
+      "cassandra-eventual-consistency",
+      "cloudflare-workers-ai-free-tier"
+    ],
+    "latency": [
+      "cassandra-eventual-consistency",
+      "enterprise-trust-vs-process"
+    ],
+    "require": [
+      "cassandra-eventual-consistency",
+      "enterprise-trust-vs-process"
     ],
     "stores": [
-      "cassandra-eventual-consistency"
-    ],
-    "production": [
       "cassandra-eventual-consistency"
     ],
     "stored": [
@@ -623,44 +635,17 @@
     "flush": [
       "cassandra-eventual-consistency"
     ],
-    "quorum": [
+    "concept": [
       "cassandra-eventual-consistency"
     ],
-    "impact": [
+    "database": [
       "cassandra-eventual-consistency"
     ],
     "responsible": [
       "cassandra-eventual-consistency"
     ],
-    "concept": [
-      "cassandra-eventual-consistency"
-    ],
-    "tells": [
-      "cassandra-eventual-consistency"
-    ],
-    "keys": [
-      "cassandra-eventual-consistency"
-    ],
-    "must": [
-      "cassandra-eventual-consistency",
-      "enterprise-trust-vs-process"
-    ],
-    "database": [
-      "cassandra-eventual-consistency"
-    ],
-    "performing": [
-      "cassandra-eventual-consistency"
-    ],
-    "process": [
-      "cassandra-eventual-consistency",
-      "enterprise-trust-vs-process"
-    ],
     "occurs": [
       "cassandra-eventual-consistency"
-    ],
-    "require": [
-      "cassandra-eventual-consistency",
-      "enterprise-trust-vs-process"
     ],
     "allows": [
       "cassandra-eventual-consistency"
@@ -668,16 +653,135 @@
     "records": [
       "cassandra-eventual-consistency"
     ],
+    "performing": [
+      "cassandra-eventual-consistency"
+    ],
+    "production": [
+      "cassandra-eventual-consistency"
+    ],
+    "tells": [
+      "cassandra-eventual-consistency"
+    ],
+    "impact": [
+      "cassandra-eventual-consistency"
+    ],
+    "must": [
+      "cassandra-eventual-consistency",
+      "enterprise-trust-vs-process"
+    ],
+    "quorum": [
+      "cassandra-eventual-consistency"
+    ],
+    "keys": [
+      "cassandra-eventual-consistency"
+    ],
+    "process": [
+      "cassandra-eventual-consistency",
+      "enterprise-trust-vs-process"
+    ],
+    "cloudflare": [
+      "cloudflare-workers-ai-free-tier"
+    ],
+    "llm": [
+      "cloudflare-workers-ai-free-tier"
+    ],
+    "tokens": [
+      "cloudflare-workers-ai-free-tier"
+    ],
+    "output": [
+      "cloudflare-workers-ai-free-tier"
+    ],
+    "models": [
+      "cloudflare-workers-ai-free-tier"
+    ],
+    "input": [
+      "cloudflare-workers-ai-free-tier"
+    ],
+    "neuron": [
+      "cloudflare-workers-ai-free-tier"
+    ],
+    "limit": [
+      "cloudflare-workers-ai-free-tier"
+    ],
+    "inference": [
+      "cloudflare-workers-ai-free-tier"
+    ],
+    "free": [
+      "cloudflare-workers-ai-free-tier"
+    ],
+    "workers": [
+      "cloudflare-workers-ai-free-tier"
+    ],
+    "compute": [
+      "cloudflare-workers-ai-free-tier"
+    ],
+    "gateway": [
+      "cloudflare-workers-ai-free-tier"
+    ],
+    "dense": [
+      "cloudflare-workers-ai-free-tier"
+    ],
+    "generate": [
+      "cloudflare-workers-ai-free-tier"
+    ],
+    "params": [
+      "cloudflare-workers-ai-free-tier"
+    ],
+    "side": [
+      "cloudflare-workers-ai-free-tier"
+    ],
+    "pdfs": [
+      "cloudflare-workers-ai-free-tier"
+    ],
+    "reviews": [
+      "cloudflare-workers-ai-free-tier"
+    ],
+    "articles": [
+      "cloudflare-workers-ai-free-tier"
+    ],
+    "page": [
+      "cloudflare-workers-ai-free-tier"
+    ],
+    "available": [
+      "cloudflare-workers-ai-free-tier"
+    ],
+    "product": [
+      "cloudflare-workers-ai-free-tier"
+    ],
+    "budget": [
+      "cloudflare-workers-ai-free-tier"
+    ],
+    "answer": [
+      "cloudflare-workers-ai-free-tier"
+    ],
+    "calculate": [
+      "cloudflare-workers-ai-free-tier"
+    ],
+    "parameters": [
+      "cloudflare-workers-ai-free-tier"
+    ],
+    "default": [
+      "cloudflare-workers-ai-free-tier"
+    ],
+    "account": [
+      "cloudflare-workers-ai-free-tier"
+    ],
+    "option": [
+      "cloudflare-workers-ai-free-tier"
+    ],
+    "reasoning": [
+      "cloudflare-workers-ai-free-tier"
+    ],
     "enterprise": [
       "enterprise-trust-vs-process"
     ],
     "teams": [
       "enterprise-trust-vs-process"
     ],
-    "risk": [
+    "accountability": [
       "enterprise-trust-vs-process"
     ],
-    "accountability": [
+    "risk": [
       "enterprise-trust-vs-process"
     ],
     "because": [
@@ -686,10 +790,10 @@
     "trust": [
       "enterprise-trust-vs-process"
     ],
-    "decisions": [
+    "recovery": [
       "enterprise-trust-vs-process"
     ],
-    "recovery": [
+    "decisions": [
       "enterprise-trust-vs-process"
     ],
     "decision": [
@@ -701,22 +805,25 @@
     "expertise": [
       "enterprise-trust-vs-process"
     ],
+    "rather": [
+      "enterprise-trust-vs-process"
+    ],
+    "explicit": [
+      "enterprise-trust-vs-process"
+    ],
     "disaster": [
       "enterprise-trust-vs-process"
     ],
     "systems": [
       "enterprise-trust-vs-process"
     ],
-    "explicit": [
+    "central": [
       "enterprise-trust-vs-process"
     ],
-    "rather": [
+    "outcomes": [
       "enterprise-trust-vs-process"
     ],
-    "offs": [
-      "enterprise-trust-vs-process"
-    ],
-    "role": [
+    "organization": [
       "enterprise-trust-vs-process"
     ],
     "governance": [
@@ -725,36 +832,34 @@
     "failures": [
       "enterprise-trust-vs-process"
     ],
+    "offs": [
+      "enterprise-trust-vs-process"
+    ],
+    "role": [
+      "enterprise-trust-vs-process"
+    ],
     "deep": [
       "enterprise-trust-vs-process"
     ],
-    "cost": [
-      "enterprise-trust-vs-process"
-    ],
-    "align": [
-      "enterprise-trust-vs-process"
-    ],
-    "outcomes": [
+    "trade": [
       "enterprise-trust-vs-process"
     ],
     "mirror": [
       "enterprise-trust-vs-process"
     ],
-    "organization": [
-      "enterprise-trust-vs-process"
-    ],
-    "central": [
-      "enterprise-trust-vs-process"
-    ],
     "mistrust": [
       "enterprise-trust-vs-process"
     ],
-    "trade": [
+    "align": [
+      "enterprise-trust-vs-process"
+    ],
+    "cost": [
       "enterprise-trust-vs-process"
     ]
   },
   "keywords": [
     "acceptance",
+    "account",
     "accountability",
     "across",
     "against",
@@ -763,15 +868,20 @@
     "ai workflow",
     "align",
     "allows",
+    "answer",
     "api",
     "apis",
     "architecture",
+    "articles",
     "authentication",
+    "available",
     "because",
     "better",
     "block",
+    "budget",
     "built",
     "business",
+    "calculate",
     "cassandra",
     "central",
     "chain",
@@ -782,9 +892,11 @@
     "claude code",
     "clean",
     "client",
+    "cloudflare",
     "cluster",
     "codes",
     "coding",
+    "compute",
     "concept",
     "consistency",
     "consistent",
@@ -798,6 +910,8 @@
     "decision",
     "decisions",
     "deep",
+    "default",
+    "dense",
     "describing",
     "design",
     "designed",
@@ -833,8 +947,11 @@
     "flush",
     "focus",
     "focused",
+    "free",
     "fresh",
     "full",
+    "gateway",
+    "generate",
     "gets",
     "goal",
     "governance",
@@ -848,6 +965,8 @@
     "implemented",
     "incentives",
     "include",
+    "inference",
+    "input",
     "install",
     "instead",
     "interact",
@@ -866,7 +985,9 @@
     "less",
     "lets",
     "level",
+    "limit",
     "line",
+    "llm",
     "loop",
     "making",
     "many",
@@ -877,25 +998,33 @@
     "mistakes",
     "mistrust",
     "model",
+    "models",
     "months",
     "must",
     "myself",
     "need",
     "needs",
     "nesting",
+    "neuron",
     "next",
     "node",
     "nodes",
     "notice",
     "occurs",
     "offs",
+    "option",
     "organization",
     "outcomes",
+    "output",
     "over",
     "package",
+    "page",
     "pagination",
+    "parameters",
+    "params",
     "partition",
     "patterns",
+    "pdfs",
     "perform",
     "performing",
     "pipeline",
@@ -907,6 +1036,7 @@
     "processes",
     "produce",
     "produces",
+    "product",
     "production",
     "professional",
     "progress",
@@ -919,6 +1049,7 @@
     "read",
     "reads",
     "real",
+    "reasoning",
     "record",
     "records",
     "recovery",
@@ -936,6 +1067,7 @@
     "results",
     "return",
     "review",
+    "reviews",
     "right",
     "risk",
     "role",
@@ -948,6 +1080,7 @@
     "session",
     "sessions",
     "setting",
+    "side",
     "simple",
     "single",
     "skill",
@@ -982,6 +1115,7 @@
     "three",
     "time",
     "token",
+    "tokens",
     "tools",
     "tracker",
     "trade",
@@ -992,6 +1126,7 @@
     "vocabulary",
     "want",
     "work",
+    "workers",
     "workflow",
     "works",
     "write",
@@ -1010,13 +1145,20 @@
       "copilot-to-coworker-agent-driven-development"
     ],
     "ai workflow": [
-      "copilot-to-coworker-agent-driven-development"
+      "copilot-to-coworker-agent-driven-development",
+      "cloudflare-workers-ai-free-tier"
     ],
     "distributed systems": [
       "cassandra-eventual-consistency"
     ],
     "storage": [
       "cassandra-eventual-consistency"
+    ],
+    "cloudflare": [
+      "cloudflare-workers-ai-free-tier"
+    ],
+    "llm": [
+      "cloudflare-workers-ai-free-tier"
     ],
     "enterprise": [
       "enterprise-trust-vs-process"
@@ -1050,6 +1192,16 @@
       ],
       "date": "2017-12-07"
     },
+    "cloudflare-workers-ai-free-tier": {
+      "title": "Adding LLM APIs to Side Projects with Controlled Cost & Privacy",
+      "description": "What Cloudflare's 10,000 free daily Workers AI neurons actually buy you, and how to use them without surprise bills or data capture",
+      "tags": [
+        "AI workflow",
+        "cloudflare",
+        "llm"
+      ],
+      "date": "2026-11-16"
+    },
     "enterprise-trust-vs-process": {
       "title": "Enterprise Software Fails for Lack of Trust",
       "description": "Why process replaces judgement when accountability drifts. And how to reverse it",
@@ -1063,15 +1215,17 @@
     "ai workflow",
     "api",
     "claude code",
+    "cloudflare",
     "distributed systems",
     "enterprise",
+    "llm",
     "rest",
     "storage"
   ],
   "metadata": {
-    "total_articles": 4,
-    "total_keywords": 244,
-    "total_tags": 7,
+    "total_articles": 5,
+    "total_keywords": 275,
+    "total_tags": 9,
     "generated_at": "BUILD_TIME"
   }
 }
